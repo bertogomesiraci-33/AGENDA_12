@@ -2,7 +2,7 @@
 Script de Geração de Documentos Oficiais - Agenda 12 (Desenvolvimento de Sistemas I)
 Estudante: Iraci Berto Gomes
 Instituição: ETEC / Centro Paula Souza (CPS)
-Projeto: Meus Sites Favoritos (Compras Online & Rastreamento)
+Projeto: Meus Sites Favoritos (HTML / Web I)
 
 Gera automaticamente:
 1. IraciBertoGomes_Ag12_DS_I.docx
@@ -60,7 +60,7 @@ def gerar_word(caminho_docx, base_dir):
     p_title = doc.add_paragraph()
     p_title.alignment = WD_ALIGN_PARAGRAPH.CENTER
     p_title.paragraph_format.space_after = Pt(2)
-    run_title = p_title.add_run("RELATÓRIO TÉCNICO DE DESENVOLVIMENTO WEB")
+    run_title = p_title.add_run("RELATÓRIO TÉCNICO DE DESENVOLVIMENTO DE SOFTWARE")
     run_title.bold = True
     run_title.font.name = "Arial"
     run_title.font.size = Pt(16)
@@ -72,7 +72,7 @@ def gerar_word(caminho_docx, base_dir):
     p_sub.paragraph_format.space_after = Pt(12)
     run_sub = p_sub.add_run(
         "Curso Técnico em Desenvolvimento de Sistemas | ETEC / Centro Paula Souza\n"
-        "Componente: Desenvolvimento de Sistemas I — Agenda 12 (HTML5, Semântica e GitHub Pages)\n"
+        "Componente: Desenvolvimento de Sistemas I — Agenda 12 (HTML / Web I)\n"
         "Estudante: Iraci Berto Gomes  |  Arquivo de Entrega: IraciBertoGomes_Ag12_DS_I"
     )
     run_sub.font.name = "Arial"
@@ -109,26 +109,24 @@ def gerar_word(caminho_docx, base_dir):
     # Seção 1: Cenário e Objetivos da Atividade
     add_section_header("1. Cenário e Proposta da Atividade")
     add_body(
-        "Na Sociedade da Informação e da Comunicação, os sistemas integrados à web representam a principal interface de divulgação "
-        "de serviços, produtos e conexão entre consumidores e empresas. O objetivo desta atividade prática da Agenda 12 é consolidar os "
-        "fundamentos de marcação semântica com HTML5 e estilização visual com CSS3, mediante o desenvolvimento de uma página personalizada "
-        "denominada 'Meus sites favoritos'."
+        "Na Sociedade da Informação e da Comunicação, é essencial que as empresas e profissionais divulguem seus serviços "
+        "e conhecimentos por meio de sistemas web integrados. O objetivo desta atividade prática da Agenda 12 é consolidar os "
+        "conceitos fundamentais da linguagem de marcação HTML estudados na apostila didática da ETEC (agenda_12_web_i_dsi_i_atualizada1_251.pdf)."
     )
     add_body(
-        "Para a composição temática da página, foram reunidos os 5 sites favoritos do estudante voltados para compras online e logística: "
-        "Shopee, Mercado Livre, Correios, Casas Bahia e Amazon. A solução foi projetada cumprindo rigorosamente as recomendações "
-        "estruturais da W3C, acessibilidade e as diretrizes pedagógicas da ETEC/Centro Paula Souza."
+        "A página foi desenvolvida para organizar 5 sites favoritos do cotidiano para compras online e rastreamento de encomendas: "
+        "Shopee, Mercado Livre, Correios, Casas Bahia e Amazon, aplicando com fidelidade a estrutura de tags exigida pelo enunciado."
     )
 
     # Seção 2: Checklist de Atendimento aos Requisitos
-    add_section_header("2. Matriz de Conformidade com os Requisitos do Enunciado")
+    add_section_header("2. Matriz de Atendimento aos Requisitos do Enunciado")
     
     table_req = doc.add_table(rows=8, cols=3)
     table_req.alignment = WD_TABLE_ALIGNMENT.CENTER
     table_req.autofit = False
 
     col_widths_req = [Inches(2.4), Inches(2.3), Inches(2.2)]
-    headers_req = ["Requisito do Enunciado", "Implementação no Projeto", "Status de Conformidade"]
+    headers_req = ["Requisito do Enunciado", "Implementação no Código HTML", "Status de Conformidade"]
 
     for i, h in enumerate(headers_req):
         cell = table_req.cell(0, i)
@@ -145,11 +143,11 @@ def gerar_word(caminho_docx, base_dir):
     dados_req = [
         ("Título (aba) da página", "<title>Meus sites favoritos</title>", "Atendido com Exatidão"),
         ("Título do corpo da página", "Meus sites favoritos: Iraci Berto Gomes", "Atendido com Exatidão"),
-        ("Nome de cada site acima da imagem", "Tag <h1> individual para cada site", "Atendido (Conforme Dica)"),
+        ("Nome de cada site acima da imagem", "Tag <h1> com o nome de cada site", "Atendido (Conforme Dica)"),
         ("5 Imagens locais dos sites", "Imagens salvas na mesma pasta do HTML", "Atendido com Arquivos Locais"),
-        ("Link abaixo de cada imagem", "Tag <a href='...'> direcionando ao portal", "Atendido com Target Blank"),
-        ("Link na própria imagem (Opcional)", "Tag <img> envolvida por tag <a> clicável", "Atendido (Diferencial)"),
-        ("Código com comentários em linhas", "Comentários em todas as tags e seções", "Atendido Linha a Linha")
+        ("Link abaixo de cada imagem", "Tag <a href='...' target='_blank'>", "Atendido com Target Blank"),
+        ("Link na própria imagem (Opcional)", "Tag <img> dentro da tag <a> clicável", "Atendido (Diferencial)"),
+        ("Código com comentários em linhas", "Comentários didáticos <!-- --> nas tags", "Atendido Linha a Linha")
     ]
 
     for row_idx, row_data in enumerate(dados_req, start=1):
@@ -166,18 +164,18 @@ def gerar_word(caminho_docx, base_dir):
             r.font.color.rgb = dark
             if col_idx == 2:
                 r.bold = True
-                r.font.color.rgb = RGBColor(22, 101, 52)  # Verde escuro
+                r.font.color.rgb = RGBColor(22, 101, 52)
 
     # Seção 3: Seleção dos 5 Sites Favoritos
-    add_section_header("3. Relação dos 5 Sites de Compras e Logística Selecionados")
-    add_body("Para a composição da página, foram selecionadas cinco plataformas de comércio eletrônico e rastreamento favoritas:")
+    add_section_header("3. Relação dos 5 Sites Selecionados e Tags Utilizadas")
+    add_body("Conforme o material de estudo da Agenda 12, cada site foi estruturado com as tags <h1>, <figure>, <img>, <figcaption>, <p> e <a>:")
 
     table_sites = doc.add_table(rows=6, cols=4)
     table_sites.alignment = WD_TABLE_ALIGNMENT.CENTER
     table_sites.autofit = False
 
     col_widths_sites = [Inches(1.2), Inches(1.5), Inches(2.2), Inches(2.0)]
-    headers_sites = ["Site", "Categoria", "Finalidade no Cotidiano", "URL Oficial"]
+    headers_sites = ["Site", "Categoria", "Descrição Didática", "Arquivo Local da Imagem"]
 
     for i, h in enumerate(headers_sites):
         cell = table_sites.cell(0, i)
@@ -192,11 +190,11 @@ def gerar_word(caminho_docx, base_dir):
         r.font.color.rgb = RGBColor(255, 255, 255)
 
     dados_sites = [
-        ("Shopee", "E-commerce & Cupons", "Ofertas diárias relâmpago, cupons de desconto, frete grátis e grande catálogo.", "https://shopee.com.br"),
-        ("Mercado Livre", "Marketplace Líder", "Compras seguras com garantia Mercado Pago e entrega expressa Full.", "https://www.mercadolivre.com.br"),
-        ("Correios", "Logística & Rastreio", "Acompanhamento em tempo real de encomendas, cálculo de prazos e importações.", "https://www.correios.com.br"),
-        ("Casas Bahia", "Varejo & Eletrodomésticos", "Venda tradicional de móveis, eletrodomésticos, celulares e facilidades de crédito.", "https://www.casasbahia.com.br"),
-        ("Amazon", "E-commerce Global & Prime", "Plataforma global com frete grátis Prime, promoções Prime Day, livros e tecnologia.", "https://www.amazon.com.br")
+        ("Shopee", "E-commerce & Ofertas", "Ofertas diárias relâmpago, cupons e frete grátis em produtos diversos.", "site1_shopee.png"),
+        ("Mercado Livre", "Marketplace", "Compras seguras com Mercado Pago e entregas rápidas na modalidade Full.", "site2_mercadolivre.png"),
+        ("Correios", "Rastreio e Logística", "Acompanhamento em tempo real de encomendas, cálculo de prazos e Sedex.", "site3_correios.png"),
+        ("Casas Bahia", "Varejo", "Móveis, eletrodomésticos, tecnologia e condições no carnê digital.", "site4_casasbahia.png"),
+        ("Amazon", "E-commerce Global", "Entregas rápidas Prime, catálogo amplo de eletrônicos, livros e promoções.", "site5_amazon.png")
     ]
 
     for row_idx, row_data in enumerate(dados_sites, start=1):
@@ -206,7 +204,7 @@ def gerar_word(caminho_docx, base_dir):
             cell.width = col_widths_sites[col_idx]
             set_cell_background(cell, bg)
             p = cell.paragraphs[0]
-            p.alignment = WD_ALIGN_PARAGRAPH.CENTER if col_idx == 0 else WD_ALIGN_PARAGRAPH.LEFT
+            p.alignment = WD_ALIGN_PARAGRAPH.CENTER if col_idx in (0, 3) else WD_ALIGN_PARAGRAPH.LEFT
             r = p.add_run(val)
             r.font.name = "Arial"
             r.font.size = Pt(8.5)
@@ -218,12 +216,11 @@ def gerar_word(caminho_docx, base_dir):
     add_section_header("4. Evidências de Execução no Navegador e Código Comentado")
     add_body("Conforme orientação da atividade, são apresentadas abaixo as capturas comprobatórias:")
 
-    # Imagem 1: Execução no navegador
     img_nav = os.path.join(base_dir, "captura-execucao-navegador.png")
     if os.path.exists(img_nav):
         p_cap1_title = doc.add_paragraph()
         p_cap1_title.paragraph_format.space_before = Pt(6)
-        r = p_cap1_title.add_run("Figura 1: Execução da página web renderizada no navegador (Desktop):")
+        r = p_cap1_title.add_run("Figura 1: Execução da página web renderizada no navegador com as capturas dos sites:")
         r.bold = True
         r.font.size = Pt(9)
         p_img1 = doc.add_paragraph()
@@ -231,12 +228,11 @@ def gerar_word(caminho_docx, base_dir):
         p_img1.paragraph_format.space_after = Pt(8)
         p_img1.add_run().add_picture(img_nav, width=Inches(6.2))
 
-    # Imagem 2: Código comentado
     img_code = os.path.join(base_dir, "captura-codigo-html-comentado.png")
     if os.path.exists(img_code):
         p_cap2_title = doc.add_paragraph()
         p_cap2_title.paragraph_format.space_before = Pt(6)
-        r = p_cap2_title.add_run("Figura 2: Captura do código HTML5 com comentários didáticos no Visual Studio Code:")
+        r = p_cap2_title.add_run("Figura 2: Código HTML com comentários nas linhas no Visual Studio Code:")
         r.bold = True
         r.font.size = Pt(9)
         p_img2 = doc.add_paragraph()
@@ -260,27 +256,15 @@ def gerar_word(caminho_docx, base_dir):
     r_code.font.color.rgb = RGBColor(30, 41, 59)
 
     # Seção 6: Procedimento de Publicação no GitHub e GitHub Pages
-    add_section_header("6. Procedimento de Hospedagem no GitHub Pages")
+    add_section_header("6. Hospedagem no GitHub e GitHub Pages")
     add_body(
-        "Em observância ao guia didático 'Como hospedar um site no GitHub Pages' disponibilizado pelo Centro Paula Souza, "
-        "o projeto foi estruturado com controle de versão Git e preparado para deploy estático gratuito:"
+        "Em observância ao guia 'Como hospedar um site no GitHub Pages' disponibilizado pelo Centro Paula Souza, "
+        "o projeto foi enviado ao GitHub e publicado online:"
     )
     add_body(
-        "1. Inicialização do repositório local com 'git init' e inclusão de todos os arquivos do site.\n"
-        "2. Criação de arquivo index.html na raiz do projeto (cópia idêntica de IraciBertoGomes_Ag12_DS_I.html).\n"
-        "3. Vinculação ao repositório remoto público no GitHub: https://github.com/bertogomesiraci-33/AGENDA_12.git\n"
-        "4. Ativação do serviço GitHub Pages em Settings > Pages > Build and deployment (Branch: main / root).\n"
-        "5. Disponibilização pública online através da URL: https://bertogomesiraci-33.github.io/AGENDA_12/"
-    )
-
-    # Seção 7: Conclusão e Competências
-    add_section_header("7. Competências e Habilidades Consolidadas")
-    add_body(
-        "A realização prática da Agenda 12 permitiu consolidar com êxito os seguintes objetivos de formação:\n"
-        "• Estruturação semântica em conformidade com os padrões modernos da Web (HTML5: header, main, article, figure, a, h1);\n"
-        "• Manipulação precisa de caminhos relativos de arquivos para inclusão de imagens locais e folhas de estilos;\n"
-        "• Aplicação de comentários no código-fonte como instrumento de legibilidade e documentação técnica;\n"
-        "• Versionamento distribuído com Git e hospedagem em nuvem via GitHub Pages."
+        "• Repositório no GitHub: https://github.com/bertogomesiraci-33/AGENDA_12\n"
+        "• Site no ar via GitHub Pages: https://bertogomesiraci-33.github.io/AGENDA_12/\n"
+        "• Arquivo principal: index.html e IraciBertoGomes_Ag12_DS_I.html na raiz do repositório."
     )
 
     doc.save(caminho_docx)
@@ -381,10 +365,10 @@ def gerar_pdf(caminho_pdf, base_dir):
     story = []
 
     # Cabeçalho Principal
-    story.append(Paragraph("RELATÓRIO TÉCNICO DE DESENVOLVIMENTO WEB", title_style))
+    story.append(Paragraph("RELATÓRIO TÉCNICO DE DESENVOLVIMENTO DE SOFTWARE", title_style))
     story.append(Paragraph(
         "Curso Técnico em Desenvolvimento de Sistemas | ETEC / Centro Paula Souza<br/>"
-        "Componente: Desenvolvimento de Sistemas I — Agenda 12 (HTML5, Semântica e GitHub Pages)<br/>"
+        "Componente: Desenvolvimento de Sistemas I — Agenda 12 (HTML / Web I)<br/>"
         "Estudante: <b>Iraci Berto Gomes</b>  |  Arquivo de Entrega: <b>IraciBertoGomes_Ag12_DS_I</b>",
         subtitle_style
     ))
@@ -393,26 +377,26 @@ def gerar_pdf(caminho_pdf, base_dir):
     # Seção 1
     story.append(Paragraph("1. Cenário e Proposta da Atividade", h1_style))
     story.append(Paragraph(
-        "Na Sociedade da Informação e da Comunicação, os sistemas integrados à web representam a base da comunicação contemporânea. "
-        "A atividade da Agenda 12 teve como objetivo a implementação prática de uma página estruturada em <b>HTML5</b> intitulada "
-        "<i>'Meus sites favoritos'</i>, integrando cinco plataformas favoritas de compras online e logística: <b>Shopee, Mercado Livre, "
+        "A atividade prática da Agenda 12 teve como objetivo a implementação de uma página web aplicando estritamente "
+        "as tags básicas de <b>HTML</b> estudadas no material didático (<i>agenda_12_web_i_dsi_i_atualizada1_251.pdf</i>), "
+        "intitulada <i>'Meus sites favoritos'</i> com 5 plataformas do cotidiano: <b>Shopee, Mercado Livre, "
         "Correios, Casas Bahia e Amazon</b>.",
         body_style
     ))
 
     # Seção 2: Matriz de Conformidade
-    story.append(Paragraph("2. Matriz de Conformidade com os Requisitos do Enunciado", h1_style))
+    story.append(Paragraph("2. Matriz de Atendimento aos Requisitos do Enunciado", h1_style))
     t1_data = [
         [Paragraph("<b>Requisito do Enunciado</b>", table_header),
-         Paragraph("<b>Implementação no Projeto</b>", table_header),
+         Paragraph("<b>Implementação no Código HTML</b>", table_header),
          Paragraph("<b>Status</b>", table_header)],
         [Paragraph("Título (aba) da página", table_body), Paragraph("&lt;title&gt;Meus sites favoritos&lt;/title&gt;", table_body), Paragraph("<font color='#166534'><b>Atendido</b></font>", table_body)],
         [Paragraph("Título do corpo da página", table_body), Paragraph("Meus sites favoritos: Iraci Berto Gomes", table_body), Paragraph("<font color='#166534'><b>Atendido</b></font>", table_body)],
         [Paragraph("Nome de cada site acima da imagem", table_body), Paragraph("Tag &lt;h1&gt; para o nome de cada site", table_body), Paragraph("<font color='#166534'><b>Atendido</b></font>", table_body)],
-        [Paragraph("5 Imagens locais dos sites", table_body), Paragraph("Imagens armazenadas na pasta raiz do HTML", table_body), Paragraph("<font color='#166534'><b>Atendido</b></font>", table_body)],
+        [Paragraph("5 Imagens locais dos sites", table_body), Paragraph("Imagens salvas na pasta raiz do HTML", table_body), Paragraph("<font color='#166534'><b>Atendido</b></font>", table_body)],
         [Paragraph("Link abaixo de cada imagem", table_body), Paragraph("Tag &lt;a href='...' target='_blank'&gt;", table_body), Paragraph("<font color='#166534'><b>Atendido</b></font>", table_body)],
-        [Paragraph("Link na imagem (Opcional)", table_body), Paragraph("Tag &lt;img&gt; envolvida pela tag &lt;a&gt;", table_body), Paragraph("<font color='#166534'><b>Atendido</b></font>", table_body)],
-        [Paragraph("Código comentado em linhas", table_body), Paragraph("Comentários didáticos em todas as tags", table_body), Paragraph("<font color='#166534'><b>Atendido</b></font>", table_body)]
+        [Paragraph("Link na imagem (Opcional)", table_body), Paragraph("Tag &lt;img&gt; dentro da tag &lt;a&gt;", table_body), Paragraph("<font color='#166534'><b>Atendido</b></font>", table_body)],
+        [Paragraph("Código comentado em linhas", table_body), Paragraph("Comentários didáticos nas tags HTML", table_body), Paragraph("<font color='#166534'><b>Atendido</b></font>", table_body)]
     ]
     t1 = Table(t1_data, colWidths=[180, 260, 100])
     t1.setStyle(TableStyle([
@@ -428,17 +412,17 @@ def gerar_pdf(caminho_pdf, base_dir):
     story.append(Spacer(1, 6))
 
     # Seção 3: Relação dos Sites
-    story.append(Paragraph("3. Relação dos 5 Sites de Compras e Logística Selecionados", h1_style))
+    story.append(Paragraph("3. Relação dos 5 Sites Selecionados e Tags Utilizadas", h1_style))
     t2_data = [
         [Paragraph("<b>Site</b>", table_header),
          Paragraph("<b>Categoria</b>", table_header),
-         Paragraph("<b>Finalidade no Cotidiano</b>", table_header),
-         Paragraph("<b>URL Oficial</b>", table_header)],
-        [Paragraph("<b>Shopee</b>", table_body), Paragraph("E-commerce & Cupons", table_body), Paragraph("Ofertas diárias relâmpago, cupons de desconto, frete grátis e grande catálogo.", table_body), Paragraph("shopee.com.br", table_body)],
-        [Paragraph("<b>Mercado Livre</b>", table_body), Paragraph("Marketplace Líder", table_body), Paragraph("Compras seguras com Mercado Pago e entregas rápidas na modalidade Full.", table_body), Paragraph("mercadolivre.com.br", table_body)],
-        [Paragraph("<b>Correios</b>", table_body), Paragraph("Logística & Rastreio", table_body), Paragraph("Acompanhamento em tempo real de encomendas, prazos e importações.", table_body), Paragraph("correios.com.br", table_body)],
-        [Paragraph("<b>Casas Bahia</b>", table_body), Paragraph("Varejo Tradicional", table_body), Paragraph("Venda de móveis, eletrodomésticos, tecnologia e condições no carnê digital.", table_body), Paragraph("casasbahia.com.br", table_body)],
-        [Paragraph("<b>Amazon</b>", table_body), Paragraph("E-commerce Global", table_body), Paragraph("Entregas expressas Prime, catálogo internacional, livros e eletrônicos.", table_body), Paragraph("amazon.com.br", table_body)]
+         Paragraph("<b>Descrição Didática</b>", table_header),
+         Paragraph("<b>Arquivo da Imagem</b>", table_header)],
+        [Paragraph("<b>Shopee</b>", table_body), Paragraph("E-commerce & Ofertas", table_body), Paragraph("Promoções diárias, cupons de desconto e frete grátis.", table_body), Paragraph("site1_shopee.png", table_body)],
+        [Paragraph("<b>Mercado Livre</b>", table_body), Paragraph("Marketplace", table_body), Paragraph("Compras seguras com Mercado Pago e entregas rápidas Full.", table_body), Paragraph("site2_mercadolivre.png", table_body)],
+        [Paragraph("<b>Correios</b>", table_body), Paragraph("Rastreio e Logística", table_body), Paragraph("Acompanhamento de encomendas em tempo real e cálculo de frete.", table_body), Paragraph("site3_correios.png", table_body)],
+        [Paragraph("<b>Casas Bahia</b>", table_body), Paragraph("Varejo", table_body), Paragraph("Eletrodomésticos, móveis, tecnologia e carnê digital.", table_body), Paragraph("site4_casasbahia.png", table_body)],
+        [Paragraph("<b>Amazon</b>", table_body), Paragraph("E-commerce Global", table_body), Paragraph("Entregas rápidas Prime, livros, tecnologia e promoções.", table_body), Paragraph("site5_amazon.png", table_body)]
     ]
     t2 = Table(t2_data, colWidths=[90, 100, 240, 110])
     t2.setStyle(TableStyle([
@@ -457,13 +441,13 @@ def gerar_pdf(caminho_pdf, base_dir):
     story.append(Paragraph("4. Evidências de Execução no Navegador e Código Comentado", h1_style))
     img_nav = os.path.join(base_dir, "captura-execucao-navegador.png")
     if os.path.exists(img_nav):
-        story.append(Paragraph("<b>Figura 1: Execução da página web renderizada no navegador (Desktop):</b>", body_style))
+        story.append(Paragraph("<b>Figura 1: Execução da página web renderizada no navegador:</b>", body_style))
         story.append(RLImage(img_nav, width=540, height=280))
         story.append(Spacer(1, 4))
 
     img_code = os.path.join(base_dir, "captura-codigo-html-comentado.png")
     if os.path.exists(img_code):
-        story.append(Paragraph("<b>Figura 2: Captura do código HTML5 com comentários didáticos no Visual Studio Code:</b>", body_style))
+        story.append(Paragraph("<b>Figura 2: Código HTML com comentários nas linhas no Visual Studio Code:</b>", body_style))
         story.append(RLImage(img_code, width=540, height=310))
         story.append(Spacer(1, 4))
 
@@ -481,20 +465,20 @@ def gerar_pdf(caminho_pdf, base_dir):
     # Seção 6: Procedimento GitHub Pages
     story.append(Paragraph("6. Procedimento de Hospedagem no GitHub Pages", h1_style))
     story.append(Paragraph(
-        "Seguindo o guia didático oficial da ETEC (<i>como_hospedar_um_site_no_github_pages1.pdf</i>), o projeto foi versionado com Git:<br/>"
-        "• <b>Repositório GitHub:</b> https://github.com/bertogomesiraci-33/AGENDA_12.git<br/>"
+        "Em observância ao guia oficial da ETEC (<i>como_hospedar_um_site_no_github_pages1.pdf</i>):<br/>"
+        "• <b>Repositório GitHub:</b> https://github.com/bertogomesiraci-33/AGENDA_12<br/>"
         "• <b>Deploy GitHub Pages:</b> https://bertogomesiraci-33.github.io/AGENDA_12/<br/>"
-        "• <b>Arquivo Principal:</b> index.html e IraciBertoGomes_Ag12_DS_I.html mantidos na raiz do projeto.",
+        "• <b>Arquivo Principal:</b> index.html e IraciBertoGomes_Ag12_DS_I.html na raiz do projeto.",
         body_style
     ))
 
     # Conclusão
     story.append(Spacer(1, 4))
-    story.append(Paragraph("7. Conclusão e Competências Consolidadas", h1_style))
+    story.append(Paragraph("7. Conclusão", h1_style))
     story.append(Paragraph(
-        "A atividade foi finalizada com 100% de conformidade técnica em relação aos requisitos da Agenda 12. "
-        "Apresenta estrutura semântica HTML5 completa, estilização moderna, responsividade para dispositivos móveis, "
-        "código integralmente comentado e deploy funcional no GitHub Pages.",
+        "A atividade foi finalizada em total conformidade com o conteúdo didático da Agenda 12. "
+        "Apresenta estrutura básica e fundamental de HTML conforme ensinado no material de apoio da ETEC, "
+        "imagens locais autênticas de cada site, links funcionais com target='_blank' e hospedagem no GitHub Pages.",
         body_style
     ))
 
@@ -510,7 +494,6 @@ def gerar_zip(caminho_zip, base_dir):
     arquivos_incluir = [
         "IraciBertoGomes_Ag12_DS_I.html",
         "index.html",
-        "style.css",
         "site1_shopee.png",
         "site2_mercadolivre.png",
         "site3_correios.png",

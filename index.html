@@ -2,293 +2,262 @@
 <!-- 
     ============================================================================
     CURSO TÉCNICO EM DESENVOLVIMENTO DE SISTEMAS - ETEC / CPS
-    COMPONENTE: Desenvolvimento de Sistemas I — Agenda 12 (HTML5 / Web I)
+    COMPONENTE: Desenvolvimento de Sistemas I — Agenda 12 (HTML / Web I)
     ESTUDANTE: Iraci Berto Gomes
     ARQUIVO: IraciBertoGomes_Ag12_DS_I.html
-    PROJETO: Meus Sites Favoritos (Compras Online e Rastreamento)
+    ATIVIDADE: Meus Sites Favoritos
     ============================================================================
 -->
 
-<!-- Início do documento HTML com especificação do idioma português do Brasil -->
+<!-- Início do documento HTML indicando o idioma da página em português -->
 <html lang="pt-br">
 
 <head>
-    <!-- Declaração do conjunto de caracteres UTF-8 para suporte a acentuação e caracteres especiais -->
+    <!-- Tag meta charset para permitir caracteres especiais e acentuação da língua portuguesa -->
     <meta charset="UTF-8">
 
-    <!-- Configuração de viewport para responsividade em smartphones, tablets e computadores -->
+    <!-- Tag meta viewport para ajuste correto da escala de exibição da página -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Compatibilidade com o mecanismo do Microsoft Edge / Internet Explorer -->
+    <!-- Tag meta de compatibilidade com navegadores -->
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <!-- Metadados de descrição e autoria da página web -->
-    <meta name="description" content="Página desenvolvida para a atividade da Agenda 12 contendo meus sites favoritos de compras online e rastreamento.">
-    <meta name="author" content="Iraci Berto Gomes">
-
-    <!-- Título da aba do navegador (Exigência do enunciado: Meus sites favoritos) -->
+    <!-- Título da aba da página (Exigência do enunciado: Meus sites favoritos) -->
     <title>Meus sites favoritos</title>
 
-    <!-- Folha de estilos externa para apresentação visual profissional -->
-    <link rel="stylesheet" href="style.css">
+    <!-- Estilização simples e limpa para organização visual do texto e das imagens -->
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 20px auto;
+            max-width: 850px;
+            padding: 0 15px;
+            line-height: 1.5;
+            color: #222222;
+            background-color: #fcfcfc;
+        }
+
+        h1 {
+            color: #1a365d;
+        }
+
+        figure {
+            margin: 15px 0;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #cccccc;
+        }
+
+        figcaption {
+            font-size: 14px;
+            color: #555555;
+            margin-top: 5px;
+            font-style: italic;
+        }
+
+        a {
+            color: #0066cc;
+            font-weight: bold;
+        }
+
+        hr {
+            border: 0;
+            border-top: 1px solid #dddddd;
+            margin: 30px 0;
+        }
+    </style>
 </head>
 
 <body>
 
     <!-- ======================================================================
-         CABEÇALHO DA PÁGINA (HEADER)
-         Contém o título do corpo da página com a identificação do estudante
+         TÍTULO DO CORPO DA PÁGINA
+         Exigência do enunciado: Meus sites favoritos: Seu Nome
          ====================================================================== -->
-    <header>
-        <div class="container">
-            <!-- Emblema de identificação da disciplina e da instituição -->
-            <div class="badge-academico">
-                🛒 Desenvolvimento de Sistemas I • Agenda 12 • ETEC / CPS
-            </div>
+    <h1>Meus sites favoritos: Iraci Berto Gomes</h1>
 
-            <!-- Título do corpo da página (Exigência do enunciado: Meus sites favoritos: Seu Nome) -->
-            <h1 class="titulo-principal">
-                Meus sites favoritos: <span class="nome-destaque">Iraci Berto Gomes</span>
-            </h1>
+    <!-- Parágrafo introdutório contextualizando a atividade proposta na Agenda 12 -->
+    <p>
+        Esta página web foi desenvolvida como parte da atividade prática da <strong>Agenda 12 (Desenvolvimento de Sistemas I)</strong>,
+        com o objetivo de aplicar os conceitos básicos de HTML estudados no material didático da ETEC.
+        Abaixo estão reunidos 5 sites que utilizo frequentemente no dia a dia para compras online, busca de promoções e rastreamento de entregas.
+    </p>
 
-            <!-- Subtítulo contextualizando a atividade e a seleção de sites de compras favoritos -->
-            <p class="subtitulo-cabecalho">
-                Uma seleção de 5 plataformas favoritas para compras online, busca de ofertas e rastreamento
-                de encomendas, desenvolvida com recursos semânticos de HTML5 e estilização CSS3 moderna.
-            </p>
-        </div>
-    </header>
+    <!-- Linha divisória horizontal para separação de conteúdo -->
+    <hr>
 
     <!-- ======================================================================
-         CONTEÚDO PRINCIPAL (MAIN)
-         Contém os 5 cards dos sites de compras com nome, imagem local e links
+         SITE 1: SHOPEE
          ====================================================================== -->
-    <main>
-        <div class="container">
-            <!-- Grade semântica de cards responsivos -->
-            <div class="sites-grid">
+    <!-- Nome do site usando a tag <h1> conforme a dica da atividade -->
+    <h1>Shopee</h1>
 
-                <!-- ==============================================================
-                     SITE 1: SHOPEE
-                     ============================================================== -->
-                <article class="site-card">
-                    <!-- Cabeçalho do card com identificação e categoria -->
-                    <div class="card-header">
-                        <span class="card-categoria">E-commerce & Cupons</span>
-                        <span class="card-numero">#01</span>
-                    </div>
+    <!-- Tag figure para agrupar a imagem do site com a sua respectiva legenda -->
+    <figure>
+        <!-- Opcional da atividade: link clicável inserido também na imagem -->
+        <a href="https://shopee.com.br/?exp_group=rollout&amp;gads_t_sig=gqRjZGVrxHCFomtpsTE0MjUxOnRzc19zZGtfa2V5omt20QACpGFsZ2_SAAAAZKNkZWvAomN0xEAAAAAMaBRvcqdZwgRklGTWoHoxFGhRfNAexxPkhN1n8rcCO5qFEud_-aY2hsGdfUnqCpX0P0Z7lpJy6IP6_Ew8qmNpcGhlcnRleHTEmQAAAAy78MRK9l02l2O7f98fStjD0MHTFX_goQL6bqfBFHt_F3cT0NpzKjK_SdIQIoM-PykAVgaKvVqvdJAYDd7EuEPvUNEXsqX768G_iBSF1zrvh2q40mTsh3Y5SzmduvzWHd0Ty1HOXYYXiextDx6HzDH62mnUKd6iWwbGYvUfW3w8Phs6Oz6ZR0NEsGFE9Gemm44kPhrA2w&amp;mmp_pid=an_18326611217&amp;uls_trackid=56r6pmj200l0&amp;utm_campaign=id_81RX3csf9aD&amp;utm_content=----&amp;utm_medium=affiliates&amp;utm_source=an_18326611217&amp;utm_term=foa7g6jbf1o5&amp;gad_source=1" target="_blank">
+            <!-- Imagem local do site armazenada na mesma pasta do arquivo HTML -->
+            <img src="site1_shopee.png" alt="Captura da página inicial da Shopee Brasil" width="700">
+        </a>
+        <!-- Legenda explicativa da imagem utilizando a tag figcaption -->
+        <figcaption>Figura 1: Página inicial da Shopee Brasil (shopee.com.br)</figcaption>
+    </figure>
 
-                    <!-- Acima da imagem: Nome do site usando a tag <h1> (Dica da atividade) -->
-                    <h1>Shopee</h1>
+    <!-- Parágrafo com breve explicação do porquê o site é um dos favoritos -->
+    <p>
+        A <strong>Shopee</strong> é uma das principais plataformas de compras online, muito conhecida pelas promoções diárias,
+        cupons de desconto e frete grátis em produtos nacionais e importados.
+    </p>
 
-                    <!-- Elemento semântico figure agrupando a imagem e sua respectiva legenda -->
-                    <figure>
-                        <!-- Opcional da atividade: link interativo também na imagem do site -->
-                        <a href="https://shopee.com.br/?exp_group=rollout&amp;gads_t_sig=gqRjZGVrxHCFomtpsTE0MjUxOnRzc19zZGtfa2V5omt20QACpGFsZ2_SAAAAZKNkZWvAomN0xEAAAAAMaBRvcqdZwgRklGTWoHoxFGhRfNAexxPkhN1n8rcCO5qFEud_-aY2hsGdfUnqCpX0P0Z7lpJy6IP6_Ew8qmNpcGhlcnRleHTEmQAAAAy78MRK9l02l2O7f98fStjD0MHTFX_goQL6bqfBFHt_F3cT0NpzKjK_SdIQIoM-PykAVgaKvVqvdJAYDd7EuEPvUNEXsqX768G_iBSF1zrvh2q40mTsh3Y5SzmduvzWHd0Ty1HOXYYXiextDx6HzDH62mnUKd6iWwbGYvUfW3w8Phs6Oz6ZR0NEsGFE9Gemm44kPhrA2w&amp;mmp_pid=an_18326611217&amp;uls_trackid=56r6pmj200l0&amp;utm_campaign=id_81RX3csf9aD&amp;utm_content=----&amp;utm_medium=affiliates&amp;utm_source=an_18326611217&amp;utm_term=foa7g6jbf1o5&amp;gad_source=1" target="_blank" rel="noopener noreferrer" title="Visitar a Shopee Brasil">
-                            <!-- Imagem do site armazenada localmente na mesma pasta do arquivo HTML -->
-                            <img src="site1_shopee.png" alt="Logotipo e apresentação da Shopee Brasil" width="800" height="450">
-                        </a>
-                        <!-- Legenda identificando a fonte da imagem e atribuição -->
-                        <figcaption>Figura 1: Portal de compras Shopee Brasil (shopee.com.br)</figcaption>
-                    </figure>
+    <!-- Link para o site abaixo da imagem utilizando a tag <a> com target="_blank" -->
+    <p>
+        <a href="https://shopee.com.br/?exp_group=rollout&amp;gads_t_sig=gqRjZGVrxHCFomtpsTE0MjUxOnRzc19zZGtfa2V5omt20QACpGFsZ2_SAAAAZKNkZWvAomN0xEAAAAAMaBRvcqdZwgRklGTWoHoxFGhRfNAexxPkhN1n8rcCO5qFEud_-aY2hsGdfUnqCpX0P0Z7lpJy6IP6_Ew8qmNpcGhlcnRleHTEmQAAAAy78MRK9l02l2O7f98fStjD0MHTFX_goQL6bqfBFHt_F3cT0NpzKjK_SdIQIoM-PykAVgaKvVqvdJAYDd7EuEPvUNEXsqX768G_iBSF1zrvh2q40mTsh3Y5SzmduvzWHd0Ty1HOXYYXiextDx6HzDH62mnUKd6iWwbGYvUfW3w8Phs6Oz6ZR0NEsGFE9Gemm44kPhrA2w&amp;mmp_pid=an_18326611217&amp;uls_trackid=56r6pmj200l0&amp;utm_campaign=id_81RX3csf9aD&amp;utm_content=----&amp;utm_medium=affiliates&amp;utm_source=an_18326611217&amp;utm_term=foa7g6jbf1o5&amp;gad_source=1" target="_blank">
+            Clique aqui para acessar o site da Shopee
+        </a>
+    </p>
 
-                    <!-- Breve descrição contextualizando a utilidade do site no dia a dia -->
-                    <p class="site-descricao">
-                        Uma das maiores plataformas de comércio eletrônico, famosa pelas ofertas diárias relâmpago,
-                        cupons de frete grátis e grande variedade de produtos nacionais e importados com preços acessíveis.
-                    </p>
-
-                    <!-- Abaixo da imagem: Link para o site usando a tag <a> (Requisito obrigatório) -->
-                    <a href="https://shopee.com.br/?exp_group=rollout&amp;gads_t_sig=gqRjZGVrxHCFomtpsTE0MjUxOnRzc19zZGtfa2V5omt20QACpGFsZ2_SAAAAZKNkZWvAomN0xEAAAAAMaBRvcqdZwgRklGTWoHoxFGhRfNAexxPkhN1n8rcCO5qFEud_-aY2hsGdfUnqCpX0P0Z7lpJy6IP6_Ew8qmNpcGhlcnRleHTEmQAAAAy78MRK9l02l2O7f98fStjD0MHTFX_goQL6bqfBFHt_F3cT0NpzKjK_SdIQIoM-PykAVgaKvVqvdJAYDd7EuEPvUNEXsqX768G_iBSF1zrvh2q40mTsh3Y5SzmduvzWHd0Ty1HOXYYXiextDx6HzDH62mnUKd6iWwbGYvUfW3w8Phs6Oz6ZR0NEsGFE9Gemm44kPhrA2w&amp;mmp_pid=an_18326611217&amp;uls_trackid=56r6pmj200l0&amp;utm_campaign=id_81RX3csf9aD&amp;utm_content=----&amp;utm_medium=affiliates&amp;utm_source=an_18326611217&amp;utm_term=foa7g6jbf1o5&amp;gad_source=1" target="_blank" rel="noopener noreferrer" class="link-site">
-                        Acessar a Shopee
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <line x1="7" y1="17" x2="17" y2="7"></line>
-                            <polyline points="7 7 17 7 17 17"></polyline>
-                        </svg>
-                    </a>
-                </article>
-
-                <!-- ==============================================================
-                     SITE 2: MERCADO LIVRE
-                     ============================================================== -->
-                <article class="site-card">
-                    <!-- Cabeçalho do card com identificação e categoria -->
-                    <div class="card-header">
-                        <span class="card-categoria">Marketplace Líder</span>
-                        <span class="card-numero">#02</span>
-                    </div>
-
-                    <!-- Acima da imagem: Nome do site usando a tag <h1> (Dica da atividade) -->
-                    <h1>Mercado Livre</h1>
-
-                    <!-- Elemento semântico figure agrupando a imagem e sua respectiva legenda -->
-                    <figure>
-                        <!-- Opcional da atividade: link interativo também na imagem do site -->
-                        <a href="https://www.mercadolivre.com.br/" target="_blank" rel="noopener noreferrer" title="Visitar o Mercado Livre">
-                            <!-- Imagem do site armazenada localmente na mesma pasta do arquivo HTML -->
-                            <img src="site2_mercadolivre.png" alt="Logotipo e portal do Mercado Livre" width="800" height="450">
-                        </a>
-                        <!-- Legenda identificando a fonte da imagem e atribuição -->
-                        <figcaption>Figura 2: Portal de compras Mercado Livre (mercadolivre.com.br)</figcaption>
-                    </figure>
-
-                    <!-- Breve descrição contextualizando a utilidade do site no dia a dia -->
-                    <p class="site-descricao">
-                        Líder em comércio eletrônico na América Latina, destacado pelas entregas rápidas na modalidade
-                        Mercado Envios Full, segurança nas transações via Mercado Pago e programa de benefícios Meli+.
-                    </p>
-
-                    <!-- Abaixo da imagem: Link para o site usando a tag <a> (Requisito obrigatório) -->
-                    <a href="https://www.mercadolivre.com.br/" target="_blank" rel="noopener noreferrer" class="link-site">
-                        Acessar o Mercado Livre
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <line x1="7" y1="17" x2="17" y2="7"></line>
-                            <polyline points="7 7 17 7 17 17"></polyline>
-                        </svg>
-                    </a>
-                </article>
-
-                <!-- ==============================================================
-                     SITE 3: CORREIOS
-                     ============================================================== -->
-                <article class="site-card">
-                    <!-- Cabeçalho do card com identificação e categoria -->
-                    <div class="card-header">
-                        <span class="card-categoria">Logística & Rastreio</span>
-                        <span class="card-numero">#03</span>
-                    </div>
-
-                    <!-- Acima da imagem: Nome do site usando a tag <h1> (Dica da atividade) -->
-                    <h1>Correios</h1>
-
-                    <!-- Elemento semântico figure agrupando a imagem e sua respectiva legenda -->
-                    <figure>
-                        <!-- Opcional da atividade: link interativo também na imagem do site -->
-                        <a href="https://www.maiscorreios.com.br/?gad_source=1&amp;gad_campaignid=22938353727&amp;gbraid=0AAAAA_D-uDrmqwScpCNEqqfFXW835wssU&amp;gclid=CjwKCAjwxpvXBhASEiwAue4B4XPUsn_JYG--d1q4URkzm7qWIMTKHjoFk6NrISZ0PWZaGtDXf1TJ5RoCqacQAvD_BwE" target="_blank" rel="noopener noreferrer" title="Visitar o Portal dos Correios">
-                            <!-- Imagem do site armazenada localmente na mesma pasta do arquivo HTML -->
-                            <img src="site3_correios.png" alt="Portal oficial e rastreamento dos Correios" width="800" height="450">
-                        </a>
-                        <!-- Legenda identificando a fonte da imagem e atribuição -->
-                        <figcaption>Figura 3: Portal e ferramenta de rastreio dos Correios (maiscorreios.com.br)</figcaption>
-                    </figure>
-
-                    <!-- Breve descrição contextualizando a utilidade do site no dia a dia -->
-                    <p class="site-descricao">
-                        Serviço de logística essencial para quem realiza compras online. Permite o rastreamento
-                        em tempo real de encomendas, cálculo de prazos de frete (Sedex e PAC) e gestão de entregas.
-                    </p>
-
-                    <!-- Abaixo da imagem: Link para o site usando a tag <a> (Requisito obrigatório) -->
-                    <a href="https://www.maiscorreios.com.br/?gad_source=1&amp;gad_campaignid=22938353727&amp;gbraid=0AAAAA_D-uDrmqwScpCNEqqfFXW835wssU&amp;gclid=CjwKCAjwxpvXBhASEiwAue4B4XPUsn_JYG--d1q4URkzm7qWIMTKHjoFk6NrISZ0PWZaGtDXf1TJ5RoCqacQAvD_BwE" target="_blank" rel="noopener noreferrer" class="link-site">
-                        Acessar os Correios
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <line x1="7" y1="17" x2="17" y2="7"></line>
-                            <polyline points="7 7 17 7 17 17"></polyline>
-                        </svg>
-                    </a>
-                </article>
-
-                <!-- ==============================================================
-                     SITE 4: CASAS BAHIA
-                     ============================================================== -->
-                <article class="site-card">
-                    <!-- Cabeçalho do card com identificação e categoria -->
-                    <div class="card-header">
-                        <span class="card-categoria">Varejo & Eletrodomésticos</span>
-                        <span class="card-numero">#04</span>
-                    </div>
-
-                    <!-- Acima da imagem: Nome do site usando a tag <h1> (Dica da atividade) -->
-                    <h1>Casas Bahia</h1>
-
-                    <!-- Elemento semântico figure agrupando a imagem e sua respectiva legenda -->
-                    <figure>
-                        <!-- Opcional da atividade: link interativo também na imagem do site -->
-                        <a href="https://www.casasbahia.com.br/" target="_blank" rel="noopener noreferrer" title="Visitar a Casas Bahia">
-                            <!-- Imagem do site armazenada localmente na mesma pasta do arquivo HTML -->
-                            <img src="site4_casasbahia.png" alt="Loja virtual Casas Bahia" width="800" height="450">
-                        </a>
-                        <!-- Legenda identificando a fonte da imagem e atribuição -->
-                        <figcaption>Figura 4: Loja virtual Casas Bahia (casasbahia.com.br)</figcaption>
-                    </figure>
-
-                    <!-- Breve descrição contextualizando a utilidade do site no dia a dia -->
-                    <p class="site-descricao">
-                        Uma das maiores redes varejistas do Brasil, referência na compra de móveis, eletrodomésticos,
-                        televisores e celulares, oferecendo facilidades de pagamento como o tradicional carnê digital.
-                    </p>
-
-                    <!-- Abaixo da imagem: Link para o site usando a tag <a> (Requisito obrigatório) -->
-                    <a href="https://www.casasbahia.com.br/" target="_blank" rel="noopener noreferrer" class="link-site">
-                        Acessar a Casas Bahia
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <line x1="7" y1="17" x2="17" y2="7"></line>
-                            <polyline points="7 7 17 7 17 17"></polyline>
-                        </svg>
-                    </a>
-                </article>
-
-                <!-- ==============================================================
-                     SITE 5: AMAZON
-                     ============================================================== -->
-                <article class="site-card">
-                    <!-- Cabeçalho do card com identificação e categoria -->
-                    <div class="card-header">
-                        <span class="card-categoria">E-commerce Global & Prime</span>
-                        <span class="card-numero">#05</span>
-                    </div>
-
-                    <!-- Acima da imagem: Nome do site usando a tag <h1> (Dica da atividade) -->
-                    <h1>Amazon</h1>
-
-                    <!-- Elemento semântico figure agrupando a imagem e sua respectiva legenda -->
-                    <figure>
-                        <!-- Opcional da atividade: link interativo também na imagem do site -->
-                        <a href="https://www.amazon.com.br/?&amp;tag=hydrbrabk-20&amp;ref=pd_sl_7rwd1q78df_e&amp;adgrpid=155790195778&amp;hvpone=&amp;hvptwo=&amp;hvadid=677606588104&amp;hvpos=&amp;hvnetw=g&amp;hvrand=8347059448718103289&amp;hvqmt=e&amp;hvdev=c&amp;hvdvcmdl=&amp;hvlocint=&amp;hvlocphy=9197282&amp;hvtargid=kwd-10573980&amp;hydadcr=26346_11691057&amp;mcid=b0b1e97acb143b58930b24716c21b623&amp;hvocijid=8347059448718103289--&amp;hvexpln=nav" target="_blank" rel="noopener noreferrer" title="Visitar a Amazon Brasil">
-                            <!-- Imagem do site armazenada localmente na mesma pasta do arquivo HTML -->
-                            <img src="site5_amazon.png" alt="Logotipo e plataforma da Amazon Brasil" width="800" height="450">
-                        </a>
-                        <!-- Legenda identificando a fonte da imagem e atribuição -->
-                        <figcaption>Figura 5: Portal de compras Amazon Brasil (amazon.com.br)</figcaption>
-                    </figure>
-
-                    <!-- Breve descrição contextualizando a utilidade do site no dia a dia -->
-                    <p class="site-descricao">
-                        Gigante mundial de tecnologia e comércio eletrônico, reconhecida pelo catálogo gigantesco,
-                        entregas expressas para assinantes Amazon Prime, promoções Prime Day e ampla linha de eletrônicos e livros.
-                    </p>
-
-                    <!-- Abaixo da imagem: Link para o site usando a tag <a> (Requisito obrigatório) -->
-                    <a href="https://www.amazon.com.br/?&amp;tag=hydrbrabk-20&amp;ref=pd_sl_7rwd1q78df_e&amp;adgrpid=155790195778&amp;hvpone=&amp;hvptwo=&amp;hvadid=677606588104&amp;hvpos=&amp;hvnetw=g&amp;hvrand=8347059448718103289&amp;hvqmt=e&amp;hvdev=c&amp;hvdvcmdl=&amp;hvlocint=&amp;hvlocphy=9197282&amp;hvtargid=kwd-10573980&amp;hydadcr=26346_11691057&amp;mcid=b0b1e97acb143b58930b24716c21b623&amp;hvocijid=8347059448718103289--&amp;hvexpln=nav" target="_blank" rel="noopener noreferrer" class="link-site">
-                        Acessar a Amazon
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <line x1="7" y1="17" x2="17" y2="7"></line>
-                            <polyline points="7 7 17 7 17 17"></polyline>
-                        </svg>
-                    </a>
-                </article>
-
-            </div>
-        </div>
-    </main>
+    <!-- Linha divisória horizontal entre os sites -->
+    <hr>
 
     <!-- ======================================================================
-         RODAPÉ DA PÁGINA (FOOTER)
-         Créditos institucionais e informações de entrega da atividade
+         SITE 2: MERCADO LIVRE
          ====================================================================== -->
-    <footer>
-        <div class="container">
-            <p class="creditos-autor">
-                Projeto desenvolvido por <strong>Iraci Berto Gomes</strong>
-            </p>
-            <p class="info-adicional">
-                Desenvolvimento de Sistemas I — Agenda 12 • Centro Paula Souza • ETEC • 2026
-            </p>
-            <p class="info-adicional">
-                Arquivo de Entrega: <code>IraciBertoGomes_Ag12_DS_I.html</code> | Hospedagem: GitHub Pages
-            </p>
-        </div>
-    </footer>
+    <!-- Nome do site usando a tag <h1> conforme a dica da atividade -->
+    <h1>Mercado Livre</h1>
+
+    <!-- Tag figure para agrupar a imagem do site com a sua respectiva legenda -->
+    <figure>
+        <!-- Opcional da atividade: link clicável inserido também na imagem -->
+        <a href="https://www.mercadolivre.com.br/" target="_blank">
+            <!-- Imagem local do site armazenada na mesma pasta do arquivo HTML -->
+            <img src="site2_mercadolivre.png" alt="Captura da página inicial do Mercado Livre Brasil" width="700">
+        </a>
+        <!-- Legenda explicativa da imagem utilizando a tag figcaption -->
+        <figcaption>Figura 2: Página inicial do Mercado Livre (mercadolivre.com.br)</figcaption>
+    </figure>
+
+    <!-- Parágrafo com breve explicação do porquê o site é um dos favoritos -->
+    <p>
+        O <strong>Mercado Livre</strong> é o maior marketplace da América Latina. Possui grande variedade de produtos,
+        garantia de compra segura com Mercado Pago e entregas rápidas através do Mercado Envios Full.
+    </p>
+
+    <!-- Link para o site abaixo da imagem utilizando a tag <a> com target="_blank" -->
+    <p>
+        <a href="https://www.mercadolivre.com.br/" target="_blank">
+            Clique aqui para acessar o site do Mercado Livre
+        </a>
+    </p>
+
+    <!-- Linha divisória horizontal entre os sites -->
+    <hr>
+
+    <!-- ======================================================================
+         SITE 3: CORREIOS
+         ====================================================================== -->
+    <!-- Nome do site usando a tag <h1> conforme a dica da atividade -->
+    <h1>Correios</h1>
+
+    <!-- Tag figure para agrupar a imagem do site com a sua respectiva legenda -->
+    <figure>
+        <!-- Opcional da atividade: link clicável inserido também na imagem -->
+        <a href="https://www.maiscorreios.com.br/?gad_source=1&amp;gad_campaignid=22938353727&amp;gbraid=0AAAAA_D-uDrmqwScpCNEqqfFXW835wssU&amp;gclid=CjwKCAjwxpvXBhASEiwAue4B4XPUsn_JYG--d1q4URkzm7qWIMTKHjoFk6NrISZ0PWZaGtDXf1TJ5RoCqacQAvD_BwE" target="_blank">
+            <!-- Imagem local do site armazenada na mesma pasta do arquivo HTML -->
+            <img src="site3_correios.png" alt="Captura do portal oficial e rastreamento dos Correios" width="700">
+        </a>
+        <!-- Legenda explicativa da imagem utilizando a tag figcaption -->
+        <figcaption>Figura 3: Portal oficial de rastreamento dos Correios (maiscorreios.com.br)</figcaption>
+    </figure>
+
+    <!-- Parágrafo com breve explicação do porquê o site é um dos favoritos -->
+    <p>
+        O site dos <strong>Correios</strong> é indispensável para quem compra pela internet, permitindo fazer o rastreamento
+        das encomendas passo a passo em tempo real, calcular prazos e valores de frete PAC e Sedex.
+    </p>
+
+    <!-- Link para o site abaixo da imagem utilizando a tag <a> com target="_blank" -->
+    <p>
+        <a href="https://www.maiscorreios.com.br/?gad_source=1&amp;gad_campaignid=22938353727&amp;gbraid=0AAAAA_D-uDrmqwScpCNEqqfFXW835wssU&amp;gclid=CjwKCAjwxpvXBhASEiwAue4B4XPUsn_JYG--d1q4URkzm7qWIMTKHjoFk6NrISZ0PWZaGtDXf1TJ5RoCqacQAvD_BwE" target="_blank">
+            Clique aqui para acessar o site dos Correios
+        </a>
+    </p>
+
+    <!-- Linha divisória horizontal entre os sites -->
+    <hr>
+
+    <!-- ======================================================================
+         SITE 4: CASAS BAHIA
+         ====================================================================== -->
+    <!-- Nome do site usando a tag <h1> conforme a dica da atividade -->
+    <h1>Casas Bahia</h1>
+
+    <!-- Tag figure para agrupar a imagem do site com a sua respectiva legenda -->
+    <figure>
+        <!-- Opcional da atividade: link clicável inserido também na imagem -->
+        <a href="https://www.casasbahia.com.br/" target="_blank">
+            <!-- Imagem local do site armazenada na mesma pasta do arquivo HTML -->
+            <img src="site4_casasbahia.png" alt="Captura da loja online Casas Bahia" width="700">
+        </a>
+        <!-- Legenda explicativa da imagem utilizando a tag figcaption -->
+        <figcaption>Figura 4: Loja virtual Casas Bahia (casasbahia.com.br)</figcaption>
+    </figure>
+
+    <!-- Parágrafo com breve explicação do porquê o site é um dos favoritos -->
+    <p>
+        As <strong>Casas Bahia</strong> são referência nacional no varejo para a compra de eletrodomésticos, móveis,
+        celulares e eletrônicos, oferecendo ofertas para o lar e facilidades de pagamento pelo carnê digital.
+    </p>
+
+    <!-- Link para o site abaixo da imagem utilizando a tag <a> com target="_blank" -->
+    <p>
+        <a href="https://www.casasbahia.com.br/" target="_blank">
+            Clique aqui para acessar o site das Casas Bahia
+        </a>
+    </p>
+
+    <!-- Linha divisória horizontal entre os sites -->
+    <hr>
+
+    <!-- ======================================================================
+         SITE 5: AMAZON
+         ====================================================================== -->
+    <!-- Nome do site usando a tag <h1> conforme a dica da atividade -->
+    <h1>Amazon</h1>
+
+    <!-- Tag figure para agrupar a imagem do site com a sua respectiva legenda -->
+    <figure>
+        <!-- Opcional da atividade: link clicável inserido também na imagem -->
+        <a href="https://www.amazon.com.br/?&amp;tag=hydrbrabk-20&amp;ref=pd_sl_7rwd1q78df_e&amp;adgrpid=155790195778&amp;hvpone=&amp;hvptwo=&amp;hvadid=677606588104&amp;hvpos=&amp;hvnetw=g&amp;hvrand=8347059448718103289&amp;hvqmt=e&amp;hvdev=c&amp;hvdvcmdl=&amp;hvlocint=&amp;hvlocphy=9197282&amp;hvtargid=kwd-10573980&amp;hydadcr=26346_11691057&amp;mcid=b0b1e97acb143b58930b24716c21b623&amp;hvocijid=8347059448718103289--&amp;hvexpln=nav" target="_blank">
+            <!-- Imagem local do site armazenada na mesma pasta do arquivo HTML -->
+            <img src="site5_amazon.png" alt="Captura da página inicial da Amazon Brasil" width="700">
+        </a>
+        <!-- Legenda explicativa da imagem utilizando a tag figcaption -->
+        <figcaption>Figura 5: Portal da Amazon Brasil (amazon.com.br)</figcaption>
+    </figure>
+
+    <!-- Parágrafo com breve explicação do porquê o site é um dos favoritos -->
+    <p>
+        A <strong>Amazon</strong> é reconhecida mundialmente pela ampla variedade de produtos, confiabilidade nas entregas,
+        vantagens exclusivas do programa Prime e catálogo completo de livros e tecnologia.
+    </p>
+
+    <!-- Link para o site abaixo da imagem utilizando a tag <a> com target="_blank" -->
+    <p>
+        <a href="https://www.amazon.com.br/?&amp;tag=hydrbrabk-20&amp;ref=pd_sl_7rwd1q78df_e&amp;adgrpid=155790195778&amp;hvpone=&amp;hvptwo=&amp;hvadid=677606588104&amp;hvpos=&amp;hvnetw=g&amp;hvrand=8347059448718103289&amp;hvqmt=e&amp;hvdev=c&amp;hvdvcmdl=&amp;hvlocint=&amp;hvlocphy=9197282&amp;hvtargid=kwd-10573980&amp;hydadcr=26346_11691057&amp;mcid=b0b1e97acb143b58930b24716c21b623&amp;hvocijid=8347059448718103289--&amp;hvexpln=nav" target="_blank">
+            Clique aqui para acessar o site da Amazon
+        </a>
+    </p>
+
+    <!-- Linha divisória horizontal final -->
+    <hr>
+
+    <!-- Informações de identificação do aluno no final da página -->
+    <p>
+        <em>Atividade desenvolvida por <strong>Iraci Berto Gomes</strong> — Curso Técnico em Desenvolvimento de Sistemas (ETEC / CPS) — Agenda 12.</em>
+    </p>
 
 </body>
 </html>
