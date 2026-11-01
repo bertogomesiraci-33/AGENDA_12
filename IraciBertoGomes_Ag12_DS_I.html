@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<!-- 
+    ============================================================================
+    CURSO TÉCNICO EM DESENVOLVIMENTO DE SISTEMAS - ETEC / CPS
+    COMPONENTE: Desenvolvimento de Sistemas I — Agenda 12 (HTML5 / Web I)
+    ESTUDANTE: Iraci Berto Gomes
+    ARQUIVO: IraciBertoGomes_Ag12_DS_I.html
+    PROJETO: Meus Sites Favoritos
+    ============================================================================
+-->
+
+<!-- Início do documento HTML com especificação do idioma português do Brasil -->
+<html lang="pt-br">
+
+<head>
+    <!-- Declaração do conjunto de caracteres UTF-8 para suporte a acentuação e caracteres especiais -->
+    <meta charset="UTF-8">
+
+    <!-- Configuração de viewport para responsividade em smartphones, tablets e desktops -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Compatibilidade com o mecanismo do Microsoft Edge / Internet Explorer -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Metadados de descrição e autoria da página web -->
+    <meta name="description" content="Página desenvolvida para a atividade da Agenda 12 de Desenvolvimento de Sistemas I contendo meus sites favoritos.">
+    <meta name="author" content="Iraci Berto Gomes">
+
+    <!-- Título da aba do navegador (Exigência do enunciado: Meus sites favoritos) -->
+    <title>Meus sites favoritos</title>
+
+    <!-- Folha de estilos externa para apresentação visual profissional -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ======================================================================
+         CABEÇALHO DA PÁGINA (HEADER)
+         Contém o título do corpo da página com a identificação do estudante
+         ====================================================================== -->
+    <header>
+        <div class="container">
+            <!-- Emblema de identificação da disciplina e da instituição -->
+            <div class="badge-academico">
+                📚 Desenvolvimento de Sistemas I • Agenda 12 • ETEC / CPS
+            </div>
+
+            <!-- Título do corpo da página (Exigência do enunciado: Meus sites favoritos: Seu Nome) -->
+            <h1 class="titulo-principal">
+                Meus sites favoritos: <span class="nome-destaque">Iraci Berto Gomes</span>
+            </h1>
+
+            <!-- Subtítulo contextualizando a atividade e a finalidade dos sites selecionados -->
+            <p class="subtitulo-cabecalho">
+                Uma seleção de 5 plataformas essenciais para estudos, trabalho e produtividade
+                em Desenvolvimento de Sistemas, reunidas em conformidade com as diretrizes da Agenda 12.
+            </p>
+        </div>
+    </header>
+
+    <!-- ======================================================================
+         CONTEÚDO PRINCIPAL (MAIN)
+         Contém os 5 cards de sites favoritos com nome, imagem local e links
+         ====================================================================== -->
+    <main>
+        <div class="container">
+            <!-- Grade semântica de cards responsivos -->
+            <div class="sites-grid">
+
+                <!-- ==============================================================
+                     SITE 1: GITHUB
+                     ============================================================== -->
+                <article class="site-card">
+                    <!-- Cabeçalho do card com identificação e categoria -->
+                    <div class="card-header">
+                        <span class="card-categoria">Controle de Versão</span>
+                        <span class="card-numero">#01</span>
+                    </div>
+
+                    <!-- Acima da imagem: Nome do site usando a tag <h1> (Dica da atividade) -->
+                    <h1>GitHub</h1>
+
+                    <!-- Elemento semântico figure agrupando a imagem e sua respectiva legenda -->
+                    <figure>
+                        <!-- Opcional da atividade: link interativo também na imagem do site -->
+                        <a href="https://github.com" target="_blank" rel="noopener noreferrer" title="Visitar o GitHub">
+                            <!-- Imagem do site armazenada localmente na mesma pasta do arquivo HTML -->
+                            <img src="site1_github.png" alt="Logotipo e apresentação do GitHub" width="800" height="450">
+                        </a>
+                        <!-- Legenda identificando a fonte da imagem e atribuição -->
+                        <figcaption>Figura 1: Interface e portal do GitHub (github.com)</figcaption>
+                    </figure>
+
+                    <!-- Breve descrição contextualizando a importância do site para os estudos -->
+                    <p class="site-descricao">
+                        Maior plataforma de hospedagem de código-fonte e controle de versão do mundo usando Git.
+                        Indispensável para gerenciamento de projetos, criação de portfólio profissional e colaboração em equipe.
+                    </p>
+
+                    <!-- Abaixo da imagem: Link para o site usando a tag <a> (Requisito obrigatório) -->
+                    <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="link-site">
+                        Acessar o GitHub
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="7" y1="17" x2="17" y2="7"></line>
+                            <polyline points="7 7 17 7 17 17"></polyline>
+                        </svg>
+                    </a>
+                </article>
+
+                <!-- ==============================================================
+                     SITE 2: MDN WEB DOCS
+                     ============================================================== -->
+                <article class="site-card">
+                    <!-- Cabeçalho do card com identificação e categoria -->
+                    <div class="card-header">
+                        <span class="card-categoria">Documentação Web</span>
+                        <span class="card-numero">#02</span>
+                    </div>
+
+                    <!-- Acima da imagem: Nome do site usando a tag <h1> (Dica da atividade) -->
+                    <h1>MDN Web Docs</h1>
+
+                    <!-- Elemento semântico figure agrupando a imagem e sua respectiva legenda -->
+                    <figure>
+                        <!-- Opcional da atividade: link interativo também na imagem do site -->
+                        <a href="https://developer.mozilla.org" target="_blank" rel="noopener noreferrer" title="Visitar o MDN Web Docs">
+                            <!-- Imagem do site armazenada localmente na mesma pasta do arquivo HTML -->
+                            <img src="site2_mdn.png" alt="Logotipo e documentação do MDN Web Docs" width="800" height="450">
+                        </a>
+                        <!-- Legenda identificando a fonte da imagem e atribuição -->
+                        <figcaption>Figura 2: Portal de documentação oficial MDN (developer.mozilla.org)</figcaption>
+                    </figure>
+
+                    <!-- Breve descrição contextualizando a importância do site para os estudos -->
+                    <p class="site-descricao">
+                        Referência técnica definitiva mantida pela Fundação Mozilla. Apresenta documentação completa,
+                        padronizada e atualizada sobre HTML5, CSS3, JavaScript e APIs modernas da Web.
+                    </p>
+
+                    <!-- Abaixo da imagem: Link para o site usando a tag <a> (Requisito obrigatório) -->
+                    <a href="https://developer.mozilla.org" target="_blank" rel="noopener noreferrer" class="link-site">
+                        Acessar o MDN Web Docs
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="7" y1="17" x2="17" y2="7"></line>
+                            <polyline points="7 7 17 7 17 17"></polyline>
+                        </svg>
+                    </a>
+                </article>
+
+                <!-- ==============================================================
+                     SITE 3: STACK OVERFLOW
+                     ============================================================== -->
+                <article class="site-card">
+                    <!-- Cabeçalho do card com identificação e categoria -->
+                    <div class="card-header">
+                        <span class="card-categoria">Comunidade Técnica</span>
+                        <span class="card-numero">#03</span>
+                    </div>
+
+                    <!-- Acima da imagem: Nome do site usando a tag <h1> (Dica da atividade) -->
+                    <h1>Stack Overflow</h1>
+
+                    <!-- Elemento semântico figure agrupando a imagem e sua respectiva legenda -->
+                    <figure>
+                        <!-- Opcional da atividade: link interativo também na imagem do site -->
+                        <a href="https://stackoverflow.com" target="_blank" rel="noopener noreferrer" title="Visitar o Stack Overflow">
+                            <!-- Imagem do site armazenada localmente na mesma pasta do arquivo HTML -->
+                            <img src="site3_stackoverflow.png" alt="Comunidade de desenvolvedores Stack Overflow" width="800" height="450">
+                        </a>
+                        <!-- Legenda identificando a fonte da imagem e atribuição -->
+                        <figcaption>Figura 3: Fórum de soluções técnicas Stack Overflow (stackoverflow.com)</figcaption>
+                    </figure>
+
+                    <!-- Breve descrição contextualizando a importância do site para os estudos -->
+                    <p class="site-descricao">
+                        Maior fórum colaborativo de perguntas e respostas para programadores. Ferramenta primordial
+                        para depuração de erros, esclarecimento de dúvidas conceituais e boas práticas de código.
+                    </p>
+
+                    <!-- Abaixo da imagem: Link para o site usando a tag <a> (Requisito obrigatório) -->
+                    <a href="https://stackoverflow.com" target="_blank" rel="noopener noreferrer" class="link-site">
+                        Acessar o Stack Overflow
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="7" y1="17" x2="17" y2="7"></line>
+                            <polyline points="7 7 17 7 17 17"></polyline>
+                        </svg>
+                    </a>
+                </article>
+
+                <!-- ==============================================================
+                     SITE 4: W3SCHOOLS
+                     ============================================================== -->
+                <article class="site-card">
+                    <!-- Cabeçalho do card com identificação e categoria -->
+                    <div class="card-header">
+                        <span class="card-categoria">Tutoriais Interativos</span>
+                        <span class="card-numero">#04</span>
+                    </div>
+
+                    <!-- Acima da imagem: Nome do site usando a tag <h1> (Dica da atividade) -->
+                    <h1>W3Schools</h1>
+
+                    <!-- Elemento semântico figure agrupando a imagem e sua respectiva legenda -->
+                    <figure>
+                        <!-- Opcional da atividade: link interativo também na imagem do site -->
+                        <a href="https://www.w3schools.com" target="_blank" rel="noopener noreferrer" title="Visitar o W3Schools">
+                            <!-- Imagem do site armazenada localmente na mesma pasta do arquivo HTML -->
+                            <img src="site4_w3schools.png" alt="Tutoriais e ambiente interativo W3Schools" width="800" height="450">
+                        </a>
+                        <!-- Legenda identificando a fonte da imagem e atribuição -->
+                        <figcaption>Figura 4: Plataforma educacional W3Schools (w3schools.com)</figcaption>
+                    </figure>
+
+                    <!-- Breve descrição contextualizando a importância do site para os estudos -->
+                    <p class="site-descricao">
+                        Ambiente de aprendizado prático e interativo com recursos "Try it Yourself".
+                        Excelente para testar rapidamente tags HTML5, propriedades CSS e scripts direto no navegador.
+                    </p>
+
+                    <!-- Abaixo da imagem: Link para o site usando a tag <a> (Requisito obrigatório) -->
+                    <a href="https://www.w3schools.com" target="_blank" rel="noopener noreferrer" class="link-site">
+                        Acessar o W3Schools
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="7" y1="17" x2="17" y2="7"></line>
+                            <polyline points="7 7 17 7 17 17"></polyline>
+                        </svg>
+                    </a>
+                </article>
+
+                <!-- ==============================================================
+                     SITE 5: YOUTUBE
+                     ============================================================== -->
+                <article class="site-card">
+                    <!-- Cabeçalho do card com identificação e categoria -->
+                    <div class="card-header">
+                        <span class="card-categoria">Vídeos & Educação</span>
+                        <span class="card-numero">#05</span>
+                    </div>
+
+                    <!-- Acima da imagem: Nome do site usando a tag <h1> (Dica da atividade) -->
+                    <h1>YouTube</h1>
+
+                    <!-- Elemento semântico figure agrupando a imagem e sua respectiva legenda -->
+                    <figure>
+                        <!-- Opcional da atividade: link interativo também na imagem do site -->
+                        <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" title="Visitar o YouTube">
+                            <!-- Imagem do site armazenada localmente na mesma pasta do arquivo HTML -->
+                            <img src="site5_youtube.png" alt="Canal de vídeos e videoaulas YouTube" width="800" height="450">
+                        </a>
+                        <!-- Legenda identificando a fonte da imagem e atribuição -->
+                        <figcaption>Figura 5: Plataforma audiovisual YouTube (youtube.com)</figcaption>
+                    </figure>
+
+                    <!-- Breve descrição contextualizando a importância do site para os estudos -->
+                    <p class="site-descricao">
+                        Plataforma de streaming essencial para assistir às videoaulas do curso técnico,
+                        tutoriais práticos de programação, canais especializados e momentos de passatempo e entretenimento.
+                    </p>
+
+                    <!-- Abaixo da imagem: Link para o site usando a tag <a> (Requisito obrigatório) -->
+                    <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" class="link-site">
+                        Acessar o YouTube
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="7" y1="17" x2="17" y2="7"></line>
+                            <polyline points="7 7 17 7 17 17"></polyline>
+                        </svg>
+                    </a>
+                </article>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- ======================================================================
+         RODAPÉ DA PÁGINA (FOOTER)
+         Créditos institucionais e informações de entrega da atividade
+         ====================================================================== -->
+    <footer>
+        <div class="container">
+            <p class="creditos-autor">
+                Projeto desenvolvido por <strong>Iraci Berto Gomes</strong>
+            </p>
+            <p class="info-adicional">
+                Desenvolvimento de Sistemas I — Agenda 12 • Centro Paula Souza • ETEC • 2026
+            </p>
+            <p class="info-adicional">
+                Arquivo de Entrega: <code>IraciBertoGomes_Ag12_DS_I.html</code> | Hospedagem: GitHub Pages
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>

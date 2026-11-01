@@ -1,0 +1,353 @@
+/* ==========================================================================
+   ESTILOS GLOBAIS E DESIGN SYSTEM - AGENDA 12 (DESENVOLVIMENTO DE SISTEMAS I)
+   Aluno: Iraci Berto Gomes
+   Instituição: ETEC / Centro Paula Souza
+   Projeto: Meus Sites Favoritos
+   ========================================================================== */
+
+/* Importação de fontes modernas e legíveis do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@600;700;800&display=swap');
+
+/* Variáveis de Cores e Configurações (Custom Properties) */
+:root {
+    --bg-primary: #0b0f19;
+    --bg-secondary: #111827;
+    --bg-card: rgba(17, 24, 39, 0.85);
+    --border-card: rgba(255, 255, 255, 0.08);
+    --border-hover: rgba(59, 130, 246, 0.5);
+    
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --text-muted: #64748b;
+    
+    --accent-blue: #3b82f6;
+    --accent-cyan: #06b6d4;
+    --accent-indigo: #6366f1;
+    --accent-gradient: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 50%, #ec4899 100%);
+    --card-gradient: linear-gradient(180deg, rgba(30, 41, 59, 0.7) 0%, rgba(15, 23, 42, 0.9) 100%);
+    
+    --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+    --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 8px 10px -6px rgba(0, 0, 0, 0.4);
+    --shadow-glow: 0 0 25px rgba(59, 130, 246, 0.25);
+    
+    --radius-sm: 8px;
+    --radius-md: 16px;
+    --radius-lg: 24px;
+    --radius-full: 9999px;
+    
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Reset Universal e Box Model */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Configuração do Corpo da Página */
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: var(--bg-primary);
+    background-image: 
+        radial-gradient(at 15% 15%, rgba(59, 130, 246, 0.12) 0px, transparent 50%),
+        radial-gradient(at 85% 85%, rgba(139, 92, 246, 0.12) 0px, transparent 50%),
+        radial-gradient(at 50% 50%, rgba(6, 182, 212, 0.08) 0px, transparent 60%);
+    background-attachment: fixed;
+    color: var(--text-primary);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+
+/* Container de Largura Controlada */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* ==========================================================================
+   CABEÇALHO DA PÁGINA (HEADER)
+   ========================================================================== */
+header {
+    padding: 50px 0 35px 0;
+    text-align: center;
+    position: relative;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    background: rgba(11, 15, 25, 0.6);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+/* Tag de identificação acadêmica */
+.badge-academico {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 16px;
+    background: rgba(59, 130, 246, 0.12);
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    border-radius: var(--radius-full);
+    color: var(--accent-cyan);
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+}
+
+/* Título principal do corpo da página (Requisito: Meus sites favoritos: Seu Nome) */
+.titulo-principal {
+    font-family: 'Outfit', sans-serif;
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 14px;
+    letter-spacing: -0.02em;
+    background: linear-gradient(135deg, #ffffff 30%, #94a3b8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.titulo-principal span.nome-destaque {
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+/* Subtítulo descritivo */
+.subtitulo-cabecalho {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    max-width: 750px;
+    margin: 0 auto;
+    font-weight: 400;
+}
+
+/* ==========================================================================
+   CONTEÚDO PRINCIPAL (MAIN & SITES)
+   ========================================================================== */
+main {
+    flex: 1;
+    padding: 50px 0 80px 0;
+}
+
+/* Grid com os cards dos sites */
+.sites-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 36px;
+}
+
+/* Card individual do site */
+.site-card {
+    background: var(--card-gradient);
+    border: 1px solid var(--border-card);
+    border-radius: var(--radius-lg);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition-normal);
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(8px);
+}
+
+.site-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--accent-gradient);
+    opacity: 0.7;
+    transition: opacity var(--transition-fast);
+}
+
+.site-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--border-hover);
+    box-shadow: var(--shadow-lg), var(--shadow-glow);
+}
+
+.site-card:hover::before {
+    opacity: 1;
+    height: 4px;
+}
+
+/* Header interno do card */
+.card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+.card-categoria {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--accent-cyan);
+    background: rgba(6, 182, 212, 0.1);
+    padding: 4px 10px;
+    border-radius: var(--radius-full);
+}
+
+.card-numero {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--text-muted);
+}
+
+/* Nome do site - Exigência do enunciado: usar tag <h1> para o nome de cada site */
+.site-card h1 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 16px;
+    letter-spacing: -0.01em;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Tag Figure e Imagem do site */
+figure {
+    margin: 0 0 16px 0;
+    width: 100%;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    background: #000;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    position: relative;
+}
+
+/* Link na imagem (Opcional recomendado) */
+figure a {
+    display: block;
+    overflow: hidden;
+}
+
+/* Imagem do site */
+figure img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    transition: transform var(--transition-normal);
+}
+
+.site-card:hover figure img {
+    transform: scale(1.04);
+}
+
+/* Legenda da imagem (figcaption) */
+figcaption {
+    padding: 8px 12px;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    background: rgba(15, 23, 42, 0.9);
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Descrição e justificativa do site favorito */
+.site-descricao {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    margin-bottom: 22px;
+    flex-grow: 1;
+}
+
+/* Link para o site abaixo da imagem (Requisito fundamental) */
+.link-site {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 12px 20px;
+    background: rgba(59, 130, 246, 0.12);
+    border: 1px solid rgba(59, 130, 246, 0.4);
+    border-radius: var(--radius-md);
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all var(--transition-normal);
+}
+
+.link-site:hover {
+    background: var(--accent-blue);
+    border-color: var(--accent-blue);
+    box-shadow: 0 8px 20px rgba(59, 130, 246, 0.35);
+    transform: translateY(-2px);
+}
+
+.link-site svg, .link-site i {
+    transition: transform var(--transition-fast);
+}
+
+.link-site:hover svg, .link-site:hover i {
+    transform: translateX(4px);
+}
+
+/* ==========================================================================
+   RODAPÉ DA PÁGINA (FOOTER)
+   ========================================================================== */
+footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(11, 15, 25, 0.95);
+    padding: 35px 0;
+    text-align: center;
+    margin-top: auto;
+}
+
+footer p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-bottom: 6px;
+}
+
+footer .creditos-autor {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+footer .info-adicional {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+}
+
+/* ==========================================================================
+   RESPONSIVIDADE (MEDIA QUERIES)
+   ========================================================================== */
+@media (max-width: 768px) {
+    header {
+        padding: 35px 0 25px 0;
+    }
+
+    .sites-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .site-card {
+        padding: 20px;
+    }
+
+    .site-card h1 {
+        font-size: 1.4rem;
+    }
+}
