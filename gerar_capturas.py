@@ -2,13 +2,39 @@ import os
 import html
 from playwright.sync_api import sync_playwright
 
-def gerar_captura_codigo():
-    html_file = r'c:\Users\Iraci\Desktop\estudos\AGENDA_12\IraciBertoGomes_Ag12_DS_I.html'
+def gerar_todas_as_capturas():
+    base_dir = r'c:\Users\Iraci\Desktop\estudos\AGENDA_12'
+    html_file = os.path.join(base_dir, 'IraciBertoGomes_Ag12_DS_I.html')
+    
     with open(html_file, 'r', encoding='utf-8') as f:
         code_text = f.read()
 
-    # Prepara visualizador estilo VS Code
-    code_viewer_html = """<!DOCTYPE html>
+    with sync_playwright() as p:
+        browser = p.chromium.launch()
+
+        # 1. Captura da execução no navegador (Desktop)
+        page_desktop = browser.new_page(viewport={'width': 1280, 'height': 850})
+        page_desktop.goto(f'file:///{os.path.abspath(html_file)}')
+        page_desktop.wait_for_timeout(1000)
+        nav_path = os.path.join(base_dir, 'captura-execucao-navegador.png')
+        page_desktop.screenshot(path=nav_path)
+        print('[OK] Captura desktop salva:', nav_path)
+
+        # Captura completa (full page)
+        full_path = os.path.join(base_dir, 'captura-execucao-navegador-completa.png')
+        page_desktop.screenshot(path=full_path, full_page=True)
+        print('[OK] Captura completa salva:', full_path)
+
+        # 2. Captura da execução no navegador (Mobile)
+        page_mobile = browser.new_page(viewport={'width': 390, 'height': 844})
+        page_mobile.goto(f'file:///{os.path.abspath(html_file)}')
+        page_mobile.wait_for_timeout(1000)
+        mob_path = os.path.join(base_dir, 'captura-execucao-mobile.png')
+        page_mobile.screenshot(path=mob_path)
+        print('[OK] Captura mobile salva:', mob_path)
+
+        # 3. Captura do código HTML com comentários (estilo VS Code)
+        code_viewer_html = """<!DOCTYPE html>
 <html>
 <head>
 <meta charset="utf-8">
@@ -119,27 +145,21 @@ def gerar_captura_codigo():
 </body>
 </html>"""
 
-    temp_file = r'c:\Users\Iraci\Desktop\estudos\AGENDA_12\temp_code_preview.html'
-    with open(temp_file, 'w', encoding='utf-8') as f:
-        f.write(code_viewer_html)
+        temp_file = os.path.join(base_dir, 'temp_code_preview.html')
+        with open(temp_file, 'w', encoding='utf-8') as tf:
+            tf.write(code_viewer_html)
 
-    out_capture = r'c:\Users\Iraci\Desktop\estudos\AGENDA_12\captura-codigo-html-comentado.png'
+        page_code = browser.new_page(viewport={'width': 1150, 'height': 1500})
+        page_code.goto(f'file:///{os.path.abspath(temp_file)}')
+        page_code.wait_for_timeout(2500)
+        code_capture_path = os.path.join(base_dir, 'captura-codigo-html-comentado.png')
+        page_code.locator('.vscode-window').screenshot(path=code_capture_path)
+        print('[OK] Captura do código com comentários salva:', code_capture_path)
 
-    with sync_playwright() as p:
-        browser = p.chromium.launch()
-        # Viewport amplo para capturar bem o bloco de código
-        page = browser.new_page(viewport={'width': 1150, 'height': 1500})
-        page.goto(f'file:///{os.path.abspath(temp_file)}')
-        page.wait_for_timeout(2500)
-        
-        # Tirar print do elemento da janela do VS Code
-        vscode_elem = page.locator('.vscode-window')
-        vscode_elem.screenshot(path=out_capture)
-        print('Saved code capture:', out_capture)
         browser.close()
 
     if os.path.exists(temp_file):
         os.remove(temp_file)
 
 if __name__ == '__main__':
-    gerar_captura_codigo()
+    gerar_todas_as_capturas()

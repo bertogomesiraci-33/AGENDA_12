@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🌐 Meus Sites Favoritos
+# 🛒 Meus Sites Favoritos: Compras Online & Rastreamento
 ### 🚀 Desenvolvimento Web I — Agenda 12 (HTML5 & CSS3) 🚀
 
 [![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
@@ -19,7 +19,9 @@
 
 ## 📌 Sobre a Atividade
 
-Atividade avaliativa prática da **Agenda 12** do componente **Desenvolvimento de Sistemas I**, com o propósito de aplicar as competências essenciais de marcação estrutural semântica com **HTML5** e estilização visual com **CSS3**.
+Atividade avaliativa prática da **Agenda 12** do componente **Desenvolvimento de Sistemas I**, com o propósito de aplicar as competências de marcação semântica com **HTML5** e estilização visual com **CSS3**.
+
+A temática selecionada reúne os **5 sites favoritos de compras online e rastreamento**, fundamentais para buscar ofertas diárias, acompanhar prazos de entrega e adquirir produtos com segurança no cotidiano.
 
 ### 🎯 Requisitos Cumpridos
 - [x] **Título da Aba (`<title>`):** Configurado exatamente como `"Meus sites favoritos"`.
@@ -33,15 +35,15 @@ Atividade avaliativa prática da **Agenda 12** do componente **Desenvolvimento d
 
 ---
 
-## 🌟 Sites Favoritos Selecionados
+## 🌟 Sites Favoritos Selecionados (Compras & Logística)
 
-| # | Site | Categoria | Finalidade para o Aluno | Link de Acesso |
+| # | Site | Categoria | Finalidade no Cotidiano | Link de Acesso |
 | :-: | :--- | :--- | :--- | :--- |
-| **01** | **GitHub** | Controle de Versão & Portfólio | Hospedagem de repositórios Git, colaboração em código aberto e portfólio. | [Acessar GitHub](https://github.com) |
-| **02** | **MDN Web Docs** | Documentação Web Oficial | Guia oficial e padronizado mundial da Mozilla para HTML5, CSS3 e JavaScript. | [Acessar MDN](https://developer.mozilla.org) |
-| **03** | **Stack Overflow** | Comunidade Técnica & Soluções | Maior comunidade para dúvidas de programação, depuração e boas práticas. | [Acessar Stack Overflow](https://stackoverflow.com) |
-| **04** | **W3Schools** | Tutoriais Interativos | Referência ágil de sintaxe com ambiente prático "Try it Yourself". | [Acessar W3Schools](https://www.w3schools.com) |
-| **05** | **YouTube** | Aprendizado & Entretenimento | Acesso a videoaulas do curso técnico, canais de tecnologia e momentos de lazer. | [Acessar YouTube](https://www.youtube.com) |
+| **01** | **Shopee** | E-commerce & Cupons | Ofertas diárias relâmpago, cupons de desconto, frete grátis e ampla variedade de produtos nacionais e importados. | [Acessar Shopee](https://shopee.com.br) |
+| **02** | **Mercado Livre** | Marketplace Líder | Compras com segurança Mercado Pago, variedade de vendedores e entrega ultrarrápida Full. | [Acessar Mercado Livre](https://www.mercadolivre.com.br) |
+| **03** | **Correios** | Logística & Rastreio | Ferramenta primordial para rastrear em tempo real encomendas e entregas de todas as lojas online. | [Acessar Correios](https://www.correios.com.br) |
+| **04** | **Casas Bahia** | Varejo Tradicional | Compra de eletrodomésticos, móveis, televisores, smartphones e facilidades no carnê digital. | [Acessar Casas Bahia](https://www.casasbahia.com.br) |
+| **05** | **Amazon** | E-commerce Global & Prime | Catálogo global de produtos, entrega expressa Amazon Prime, promoções Prime Day, livros e tecnologia. | [Acessar Amazon](https://www.amazon.com.br) |
 
 ---
 
@@ -65,15 +67,16 @@ AGENDA_12/
 ├── IraciBertoGomes_Ag12_DS_I.html    # Arquivo principal exigido no enunciado
 ├── index.html                        # Arquivo padrão para raiz do GitHub Pages
 ├── style.css                         # Folha de estilos moderna e responsiva
-├── site1_github.png                  # Imagem local do site 1 (GitHub)
-├── site2_mdn.png                     # Imagem local do site 2 (MDN Web Docs)
-├── site3_stackoverflow.png          # Imagem local do site 3 (Stack Overflow)
-├── site4_w3schools.png              # Imagem local do site 4 (W3Schools)
-├── site5_youtube.png                # Imagem local do site 5 (YouTube)
+├── site1_shopee.png                  # Imagem local do site 1 (Shopee)
+├── site2_mercadolivre.png            # Imagem local do site 2 (Mercado Livre)
+├── site3_correios.png                # Imagem local do site 3 (Correios)
+├── site4_casasbahia.png              # Imagem local do site 4 (Casas Bahia)
+├── site5_amazon.png                  # Imagem local do site 5 (Amazon)
 ├── captura-execucao-navegador.png    # Evidência da página aberta no browser
 ├── captura-execucao-mobile.png       # Evidência da responsividade mobile
 ├── captura-codigo-html-comentado.png # Evidência do código no VS Code com comentários
 ├── README.md                         # Documentação completa do repositório
+├── publicar_github.bat               # Script facilitador para envio ao GitHub
 ├── IraciBertoGomes_Ag12_DS_I.docx    # Relatório oficial acadêmico formatado
 ├── IraciBertoGomes_Ag12_DS_I.pdf     # Relatório oficial em PDF para o fichário
 └── IraciBertoGomes_Ag12_DS_I.zip     # Arquivo compactado para submissão
@@ -91,6 +94,7 @@ Seguindo o guia didático da ETEC (*como_hospedar_um_site_no_github_pages1.pdf*)
    - Marque a opção **Public** (Público) e clique em **Create repository**.
 
 2. **Enviar os Arquivos:**
+   - Dê um duplo clique no arquivo [`publicar_github.bat`](publicar_github.bat) ou use o terminal:
    ```bash
    git init
    git add .

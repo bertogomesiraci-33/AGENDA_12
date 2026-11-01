@@ -2,7 +2,7 @@
 Script de Geração de Documentos Oficiais - Agenda 12 (Desenvolvimento de Sistemas I)
 Estudante: Iraci Berto Gomes
 Instituição: ETEC / Centro Paula Souza (CPS)
-Projeto: Meus Sites Favoritos (HTML5 & CSS3)
+Projeto: Meus Sites Favoritos (Compras Online & Rastreamento)
 
 Gera automaticamente:
 1. IraciBertoGomes_Ag12_DS_I.docx
@@ -13,6 +13,7 @@ Gera automaticamente:
 import os
 import sys
 import zipfile
+import shutil
 import docx
 from docx.shared import Inches, Pt, RGBColor
 from docx.enum.text import WD_ALIGN_PARAGRAPH
@@ -108,14 +109,15 @@ def gerar_word(caminho_docx, base_dir):
     # Seção 1: Cenário e Objetivos da Atividade
     add_section_header("1. Cenário e Proposta da Atividade")
     add_body(
-        "Na Sociedade da Informação e da Comunicação, os sistemas integrados à web representam a espinha dorsal da divulgação "
-        "de serviços, produtos e conhecimento técnico. O objetivo desta atividade prática da Agenda 12 é consolidar os fundamentos "
-        "de estruturação web com HTML5 e estilização CSS3, através do desenvolvimento de uma página personalizada denominada "
-        "'Meus sites favoritos'."
+        "Na Sociedade da Informação e da Comunicação, os sistemas integrados à web representam a principal interface de divulgação "
+        "de serviços, produtos e conexão entre consumidores e empresas. O objetivo desta atividade prática da Agenda 12 é consolidar os "
+        "fundamentos de marcação semântica com HTML5 e estilização visual com CSS3, mediante o desenvolvimento de uma página personalizada "
+        "denominada 'Meus sites favoritos'."
     )
     add_body(
-        "A página foi projetada para organizar cinco portais web de máxima relevância para a formação técnica em Desenvolvimento "
-        "de Sistemas, cumprindo rigorosamente os padrões semânticos da W3C, acessibilidade e as orientações metodológicas da ETEC/CPS."
+        "Para a composição temática da página, foram reunidos os 5 sites favoritos do estudante voltados para compras online e logística: "
+        "Shopee, Mercado Livre, Correios, Casas Bahia e Amazon. A solução foi projetada cumprindo rigorosamente as recomendações "
+        "estruturais da W3C, acessibilidade e as diretrizes pedagógicas da ETEC/Centro Paula Souza."
     )
 
     # Seção 2: Checklist de Atendimento aos Requisitos
@@ -167,15 +169,15 @@ def gerar_word(caminho_docx, base_dir):
                 r.font.color.rgb = RGBColor(22, 101, 52)  # Verde escuro
 
     # Seção 3: Seleção dos 5 Sites Favoritos
-    add_section_header("3. Relação dos 5 Sites Favoritos Selecionados")
-    add_body("Para a composição da página, foram selecionados cinco portais indispensáveis na rotina do estudante de T.I.:")
+    add_section_header("3. Relação dos 5 Sites de Compras e Logística Selecionados")
+    add_body("Para a composição da página, foram selecionadas cinco plataformas de comércio eletrônico e rastreamento favoritas:")
 
     table_sites = doc.add_table(rows=6, cols=4)
     table_sites.alignment = WD_TABLE_ALIGNMENT.CENTER
     table_sites.autofit = False
 
     col_widths_sites = [Inches(1.2), Inches(1.5), Inches(2.2), Inches(2.0)]
-    headers_sites = ["Site", "Categoria", "Justificativa Didática / Profissional", "URL Oficial"]
+    headers_sites = ["Site", "Categoria", "Finalidade no Cotidiano", "URL Oficial"]
 
     for i, h in enumerate(headers_sites):
         cell = table_sites.cell(0, i)
@@ -190,11 +192,11 @@ def gerar_word(caminho_docx, base_dir):
         r.font.color.rgb = RGBColor(255, 255, 255)
 
     dados_sites = [
-        ("GitHub", "Controle de Versão", "Hospedagem de repositórios Git, colaboração open-source e portfólio.", "https://github.com"),
-        ("MDN Web Docs", "Documentação Web", "Referência mundial da Mozilla sobre padrões oficiais HTML5, CSS3 e JS.", "https://developer.mozilla.org"),
-        ("Stack Overflow", "Comunidade Técnica", "Maior fórum de suporte colaborativo para depuração e soluções de bugs.", "https://stackoverflow.com"),
-        ("W3Schools", "Tutoriais Práticos", "Plataforma de aprendizado dinâmico com testes interativos 'Try it Yourself'.", "https://www.w3schools.com"),
-        ("YouTube", "Vídeos & Educação", "Videoaulas do Centro Paula Souza, cursos técnicos e momentos de lazer.", "https://www.youtube.com")
+        ("Shopee", "E-commerce & Cupons", "Ofertas diárias relâmpago, cupons de desconto, frete grátis e grande catálogo.", "https://shopee.com.br"),
+        ("Mercado Livre", "Marketplace Líder", "Compras seguras com garantia Mercado Pago e entrega expressa Full.", "https://www.mercadolivre.com.br"),
+        ("Correios", "Logística & Rastreio", "Acompanhamento em tempo real de encomendas, cálculo de prazos e importações.", "https://www.correios.com.br"),
+        ("Casas Bahia", "Varejo & Eletrodomésticos", "Venda tradicional de móveis, eletrodomésticos, celulares e facilidades de crédito.", "https://www.casasbahia.com.br"),
+        ("Amazon", "E-commerce Global & Prime", "Plataforma global com frete grátis Prime, promoções Prime Day, livros e tecnologia.", "https://www.amazon.com.br")
     ]
 
     for row_idx, row_data in enumerate(dados_sites, start=1):
@@ -260,7 +262,7 @@ def gerar_word(caminho_docx, base_dir):
     # Seção 6: Procedimento de Publicação no GitHub e GitHub Pages
     add_section_header("6. Procedimento de Hospedagem no GitHub Pages")
     add_body(
-        "Em observância ao guia complementar 'Como hospedar um site no GitHub Pages' disponibilizado pelo Centro Paula Souza, "
+        "Em observância ao guia didático 'Como hospedar um site no GitHub Pages' disponibilizado pelo Centro Paula Souza, "
         "o projeto foi estruturado com controle de versão Git e preparado para deploy estático gratuito:"
     )
     add_body(
@@ -393,7 +395,8 @@ def gerar_pdf(caminho_pdf, base_dir):
     story.append(Paragraph(
         "Na Sociedade da Informação e da Comunicação, os sistemas integrados à web representam a base da comunicação contemporânea. "
         "A atividade da Agenda 12 teve como objetivo a implementação prática de uma página estruturada em <b>HTML5</b> intitulada "
-        "<i>'Meus sites favoritos'</i>, integrando cinco portais essenciais para o aprendizado e prática em Desenvolvimento de Sistemas.",
+        "<i>'Meus sites favoritos'</i>, integrando cinco plataformas favoritas de compras online e logística: <b>Shopee, Mercado Livre, "
+        "Correios, Casas Bahia e Amazon</b>.",
         body_style
     ))
 
@@ -425,17 +428,17 @@ def gerar_pdf(caminho_pdf, base_dir):
     story.append(Spacer(1, 6))
 
     # Seção 3: Relação dos Sites
-    story.append(Paragraph("3. Relação dos 5 Sites Favoritos Selecionados", h1_style))
+    story.append(Paragraph("3. Relação dos 5 Sites de Compras e Logística Selecionados", h1_style))
     t2_data = [
         [Paragraph("<b>Site</b>", table_header),
          Paragraph("<b>Categoria</b>", table_header),
-         Paragraph("<b>Justificativa Didática / Profissional</b>", table_header),
+         Paragraph("<b>Finalidade no Cotidiano</b>", table_header),
          Paragraph("<b>URL Oficial</b>", table_header)],
-        [Paragraph("<b>GitHub</b>", table_body), Paragraph("Controle de Versão", table_body), Paragraph("Hospedagem de repositórios Git, colaboração open-source e portfólio.", table_body), Paragraph("github.com", table_body)],
-        [Paragraph("<b>MDN Web Docs</b>", table_body), Paragraph("Documentação Web", table_body), Paragraph("Guia oficial mundial da Mozilla para HTML5, CSS3 e JavaScript.", table_body), Paragraph("developer.mozilla.org", table_body)],
-        [Paragraph("<b>Stack Overflow</b>", table_body), Paragraph("Comunidade Dev", table_body), Paragraph("Fórum colaborativo para esclarecimento de dúvidas e correção de erros.", table_body), Paragraph("stackoverflow.com", table_body)],
-        [Paragraph("<b>W3Schools</b>", table_body), Paragraph("Tutoriais Práticos", table_body), Paragraph("Plataforma interativa com testes em tempo real (Try it Yourself).", table_body), Paragraph("w3schools.com", table_body)],
-        [Paragraph("<b>YouTube</b>", table_body), Paragraph("Vídeos & Educação", table_body), Paragraph("Videoaulas da ETEC/CPS, tutoriais práticos e momentos de lazer.", table_body), Paragraph("youtube.com", table_body)]
+        [Paragraph("<b>Shopee</b>", table_body), Paragraph("E-commerce & Cupons", table_body), Paragraph("Ofertas diárias relâmpago, cupons de desconto, frete grátis e grande catálogo.", table_body), Paragraph("shopee.com.br", table_body)],
+        [Paragraph("<b>Mercado Livre</b>", table_body), Paragraph("Marketplace Líder", table_body), Paragraph("Compras seguras com Mercado Pago e entregas rápidas na modalidade Full.", table_body), Paragraph("mercadolivre.com.br", table_body)],
+        [Paragraph("<b>Correios</b>", table_body), Paragraph("Logística & Rastreio", table_body), Paragraph("Acompanhamento em tempo real de encomendas, prazos e importações.", table_body), Paragraph("correios.com.br", table_body)],
+        [Paragraph("<b>Casas Bahia</b>", table_body), Paragraph("Varejo Tradicional", table_body), Paragraph("Venda de móveis, eletrodomésticos, tecnologia e condições no carnê digital.", table_body), Paragraph("casasbahia.com.br", table_body)],
+        [Paragraph("<b>Amazon</b>", table_body), Paragraph("E-commerce Global", table_body), Paragraph("Entregas expressas Prime, catálogo internacional, livros e eletrônicos.", table_body), Paragraph("amazon.com.br", table_body)]
     ]
     t2 = Table(t2_data, colWidths=[90, 100, 240, 110])
     t2.setStyle(TableStyle([
@@ -471,7 +474,6 @@ def gerar_pdf(caminho_pdf, base_dir):
     with open(html_file, "r", encoding="utf-8") as f:
         codigo_linhas = f.readlines()
 
-    # Formatar em blocos legíveis
     codigo_formatado = "".join(codigo_linhas).replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
     story.append(Paragraph(f"<pre>{codigo_formatado}</pre>", code_style))
     story.append(Spacer(1, 6))
@@ -509,15 +511,16 @@ def gerar_zip(caminho_zip, base_dir):
         "IraciBertoGomes_Ag12_DS_I.html",
         "index.html",
         "style.css",
-        "site1_github.png",
-        "site2_mdn.png",
-        "site3_stackoverflow.png",
-        "site4_w3schools.png",
-        "site5_youtube.png",
+        "site1_shopee.png",
+        "site2_mercadolivre.png",
+        "site3_correios.png",
+        "site4_casasbahia.png",
+        "site5_amazon.png",
         "captura-execucao-navegador.png",
         "captura-execucao-mobile.png",
         "captura-codigo-html-comentado.png",
         "README.md",
+        "publicar_github.bat",
         "IraciBertoGomes_Ag12_DS_I.docx",
         "IraciBertoGomes_Ag12_DS_I.pdf"
     ]
@@ -538,7 +541,6 @@ if __name__ == "__main__":
     caminho_pdf = os.path.join(base_dir, "IraciBertoGomes_Ag12_DS_I.pdf")
     caminho_zip = os.path.join(base_dir, "IraciBertoGomes_Ag12_DS_I.zip")
 
-    # Também copia para a raiz de estudos caso o aluno queira acessar direto da pasta principal
     caminho_docx_raiz = r"c:\Users\Iraci\Desktop\estudos\IraciBertoGomes_Ag12_DS_I.docx"
     caminho_pdf_raiz = r"c:\Users\Iraci\Desktop\estudos\IraciBertoGomes_Ag12_DS_I.pdf"
     caminho_zip_raiz = r"c:\Users\Iraci\Desktop\estudos\IraciBertoGomes_Ag12_DS_I.zip"
@@ -547,8 +549,7 @@ if __name__ == "__main__":
     gerar_pdf(caminho_pdf, base_dir)
     gerar_zip(caminho_zip, base_dir)
 
-    # Copiar para a raiz de estudos
-    import shutil
+    # Copiar também para a raiz de estudos
     shutil.copyfile(caminho_docx, caminho_docx_raiz)
     shutil.copyfile(caminho_pdf, caminho_pdf_raiz)
     shutil.copyfile(caminho_zip, caminho_zip_raiz)

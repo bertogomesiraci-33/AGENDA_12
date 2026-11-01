@@ -5,7 +5,7 @@
     COMPONENTE: Desenvolvimento de Sistemas I — Agenda 12 (HTML5 / Web I)
     ESTUDANTE: Iraci Berto Gomes
     ARQUIVO: IraciBertoGomes_Ag12_DS_I.html
-    PROJETO: Meus Sites Favoritos
+    PROJETO: Meus Sites Favoritos (Compras Online e Rastreamento)
     ============================================================================
 -->
 
@@ -16,14 +16,14 @@
     <!-- Declaração do conjunto de caracteres UTF-8 para suporte a acentuação e caracteres especiais -->
     <meta charset="UTF-8">
 
-    <!-- Configuração de viewport para responsividade em smartphones, tablets e desktops -->
+    <!-- Configuração de viewport para responsividade em smartphones, tablets e computadores -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Compatibilidade com o mecanismo do Microsoft Edge / Internet Explorer -->
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <!-- Metadados de descrição e autoria da página web -->
-    <meta name="description" content="Página desenvolvida para a atividade da Agenda 12 de Desenvolvimento de Sistemas I contendo meus sites favoritos.">
+    <meta name="description" content="Página desenvolvida para a atividade da Agenda 12 contendo meus sites favoritos de compras online e rastreamento.">
     <meta name="author" content="Iraci Berto Gomes">
 
     <!-- Título da aba do navegador (Exigência do enunciado: Meus sites favoritos) -->
@@ -43,7 +43,7 @@
         <div class="container">
             <!-- Emblema de identificação da disciplina e da instituição -->
             <div class="badge-academico">
-                📚 Desenvolvimento de Sistemas I • Agenda 12 • ETEC / CPS
+                🛒 Desenvolvimento de Sistemas I • Agenda 12 • ETEC / CPS
             </div>
 
             <!-- Título do corpo da página (Exigência do enunciado: Meus sites favoritos: Seu Nome) -->
@@ -51,17 +51,17 @@
                 Meus sites favoritos: <span class="nome-destaque">Iraci Berto Gomes</span>
             </h1>
 
-            <!-- Subtítulo contextualizando a atividade e a finalidade dos sites selecionados -->
+            <!-- Subtítulo contextualizando a atividade e a seleção de sites de compras favoritos -->
             <p class="subtitulo-cabecalho">
-                Uma seleção de 5 plataformas essenciais para estudos, trabalho e produtividade
-                em Desenvolvimento de Sistemas, reunidas em conformidade com as diretrizes da Agenda 12.
+                Uma seleção de 5 plataformas favoritas para compras online, busca de ofertas e rastreamento
+                de encomendas, desenvolvida com recursos semânticos de HTML5 e estilização CSS3 moderna.
             </p>
         </div>
     </header>
 
     <!-- ======================================================================
          CONTEÚDO PRINCIPAL (MAIN)
-         Contém os 5 cards de sites favoritos com nome, imagem local e links
+         Contém os 5 cards dos sites de compras com nome, imagem local e links
          ====================================================================== -->
     <main>
         <div class="container">
@@ -69,38 +69,38 @@
             <div class="sites-grid">
 
                 <!-- ==============================================================
-                     SITE 1: GITHUB
+                     SITE 1: SHOPEE
                      ============================================================== -->
                 <article class="site-card">
                     <!-- Cabeçalho do card com identificação e categoria -->
                     <div class="card-header">
-                        <span class="card-categoria">Controle de Versão</span>
+                        <span class="card-categoria">E-commerce & Cupons</span>
                         <span class="card-numero">#01</span>
                     </div>
 
                     <!-- Acima da imagem: Nome do site usando a tag <h1> (Dica da atividade) -->
-                    <h1>GitHub</h1>
+                    <h1>Shopee</h1>
 
                     <!-- Elemento semântico figure agrupando a imagem e sua respectiva legenda -->
                     <figure>
                         <!-- Opcional da atividade: link interativo também na imagem do site -->
-                        <a href="https://github.com" target="_blank" rel="noopener noreferrer" title="Visitar o GitHub">
+                        <a href="https://shopee.com.br" target="_blank" rel="noopener noreferrer" title="Visitar a Shopee Brasil">
                             <!-- Imagem do site armazenada localmente na mesma pasta do arquivo HTML -->
-                            <img src="site1_github.png" alt="Logotipo e apresentação do GitHub" width="800" height="450">
+                            <img src="site1_shopee.png" alt="Logotipo e apresentação da Shopee Brasil" width="800" height="450">
                         </a>
                         <!-- Legenda identificando a fonte da imagem e atribuição -->
-                        <figcaption>Figura 1: Interface e portal do GitHub (github.com)</figcaption>
+                        <figcaption>Figura 1: Portal de compras Shopee Brasil (shopee.com.br)</figcaption>
                     </figure>
 
-                    <!-- Breve descrição contextualizando a importância do site para os estudos -->
+                    <!-- Breve descrição contextualizando a utilidade do site no dia a dia -->
                     <p class="site-descricao">
-                        Maior plataforma de hospedagem de código-fonte e controle de versão do mundo usando Git.
-                        Indispensável para gerenciamento de projetos, criação de portfólio profissional e colaboração em equipe.
+                        Uma das maiores plataformas de comércio eletrônico, famosa pelas ofertas diárias relâmpago,
+                        cupons de frete grátis e grande variedade de produtos nacionais e importados com preços acessíveis.
                     </p>
 
                     <!-- Abaixo da imagem: Link para o site usando a tag <a> (Requisito obrigatório) -->
-                    <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="link-site">
-                        Acessar o GitHub
+                    <a href="https://shopee.com.br" target="_blank" rel="noopener noreferrer" class="link-site">
+                        Acessar a Shopee
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <line x1="7" y1="17" x2="17" y2="7"></line>
                             <polyline points="7 7 17 7 17 17"></polyline>
@@ -109,38 +109,38 @@
                 </article>
 
                 <!-- ==============================================================
-                     SITE 2: MDN WEB DOCS
+                     SITE 2: MERCADO LIVRE
                      ============================================================== -->
                 <article class="site-card">
                     <!-- Cabeçalho do card com identificação e categoria -->
                     <div class="card-header">
-                        <span class="card-categoria">Documentação Web</span>
+                        <span class="card-categoria">Marketplace Líder</span>
                         <span class="card-numero">#02</span>
                     </div>
 
                     <!-- Acima da imagem: Nome do site usando a tag <h1> (Dica da atividade) -->
-                    <h1>MDN Web Docs</h1>
+                    <h1>Mercado Livre</h1>
 
                     <!-- Elemento semântico figure agrupando a imagem e sua respectiva legenda -->
                     <figure>
                         <!-- Opcional da atividade: link interativo também na imagem do site -->
-                        <a href="https://developer.mozilla.org" target="_blank" rel="noopener noreferrer" title="Visitar o MDN Web Docs">
+                        <a href="https://www.mercadolivre.com.br" target="_blank" rel="noopener noreferrer" title="Visitar o Mercado Livre">
                             <!-- Imagem do site armazenada localmente na mesma pasta do arquivo HTML -->
-                            <img src="site2_mdn.png" alt="Logotipo e documentação do MDN Web Docs" width="800" height="450">
+                            <img src="site2_mercadolivre.png" alt="Logotipo e portal do Mercado Livre" width="800" height="450">
                         </a>
                         <!-- Legenda identificando a fonte da imagem e atribuição -->
-                        <figcaption>Figura 2: Portal de documentação oficial MDN (developer.mozilla.org)</figcaption>
+                        <figcaption>Figura 2: Portal de compras Mercado Livre (mercadolivre.com.br)</figcaption>
                     </figure>
 
-                    <!-- Breve descrição contextualizando a importância do site para os estudos -->
+                    <!-- Breve descrição contextualizando a utilidade do site no dia a dia -->
                     <p class="site-descricao">
-                        Referência técnica definitiva mantida pela Fundação Mozilla. Apresenta documentação completa,
-                        padronizada e atualizada sobre HTML5, CSS3, JavaScript e APIs modernas da Web.
+                        Líder em comércio eletrônico na América Latina, destacado pelas entregas rápidas na modalidade
+                        Mercado Envios Full, segurança nas transações via Mercado Pago e programa de benefícios Meli+.
                     </p>
 
                     <!-- Abaixo da imagem: Link para o site usando a tag <a> (Requisito obrigatório) -->
-                    <a href="https://developer.mozilla.org" target="_blank" rel="noopener noreferrer" class="link-site">
-                        Acessar o MDN Web Docs
+                    <a href="https://www.mercadolivre.com.br" target="_blank" rel="noopener noreferrer" class="link-site">
+                        Acessar o Mercado Livre
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <line x1="7" y1="17" x2="17" y2="7"></line>
                             <polyline points="7 7 17 7 17 17"></polyline>
@@ -149,38 +149,38 @@
                 </article>
 
                 <!-- ==============================================================
-                     SITE 3: STACK OVERFLOW
+                     SITE 3: CORREIOS
                      ============================================================== -->
                 <article class="site-card">
                     <!-- Cabeçalho do card com identificação e categoria -->
                     <div class="card-header">
-                        <span class="card-categoria">Comunidade Técnica</span>
+                        <span class="card-categoria">Logística & Rastreio</span>
                         <span class="card-numero">#03</span>
                     </div>
 
                     <!-- Acima da imagem: Nome do site usando a tag <h1> (Dica da atividade) -->
-                    <h1>Stack Overflow</h1>
+                    <h1>Correios</h1>
 
                     <!-- Elemento semântico figure agrupando a imagem e sua respectiva legenda -->
                     <figure>
                         <!-- Opcional da atividade: link interativo também na imagem do site -->
-                        <a href="https://stackoverflow.com" target="_blank" rel="noopener noreferrer" title="Visitar o Stack Overflow">
+                        <a href="https://www.correios.com.br" target="_blank" rel="noopener noreferrer" title="Visitar os Correios">
                             <!-- Imagem do site armazenada localmente na mesma pasta do arquivo HTML -->
-                            <img src="site3_stackoverflow.png" alt="Comunidade de desenvolvedores Stack Overflow" width="800" height="450">
+                            <img src="site3_correios.png" alt="Portal oficial e rastreamento dos Correios" width="800" height="450">
                         </a>
                         <!-- Legenda identificando a fonte da imagem e atribuição -->
-                        <figcaption>Figura 3: Fórum de soluções técnicas Stack Overflow (stackoverflow.com)</figcaption>
+                        <figcaption>Figura 3: Portal e ferramenta de rastreio dos Correios (correios.com.br)</figcaption>
                     </figure>
 
-                    <!-- Breve descrição contextualizando a importância do site para os estudos -->
+                    <!-- Breve descrição contextualizando a utilidade do site no dia a dia -->
                     <p class="site-descricao">
-                        Maior fórum colaborativo de perguntas e respostas para programadores. Ferramenta primordial
-                        para depuração de erros, esclarecimento de dúvidas conceituais e boas práticas de código.
+                        Empresa nacional de logística essencial para quem realiza compras online. Permite o rastreamento
+                        em tempo real de encomendas, cálculo de prazos de frete (Sedex e PAC) e gestão de importações.
                     </p>
 
                     <!-- Abaixo da imagem: Link para o site usando a tag <a> (Requisito obrigatório) -->
-                    <a href="https://stackoverflow.com" target="_blank" rel="noopener noreferrer" class="link-site">
-                        Acessar o Stack Overflow
+                    <a href="https://www.correios.com.br" target="_blank" rel="noopener noreferrer" class="link-site">
+                        Acessar os Correios
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <line x1="7" y1="17" x2="17" y2="7"></line>
                             <polyline points="7 7 17 7 17 17"></polyline>
@@ -189,38 +189,38 @@
                 </article>
 
                 <!-- ==============================================================
-                     SITE 4: W3SCHOOLS
+                     SITE 4: CASAS BAHIA
                      ============================================================== -->
                 <article class="site-card">
                     <!-- Cabeçalho do card com identificação e categoria -->
                     <div class="card-header">
-                        <span class="card-categoria">Tutoriais Interativos</span>
+                        <span class="card-categoria">Varejo & Eletrodomésticos</span>
                         <span class="card-numero">#04</span>
                     </div>
 
                     <!-- Acima da imagem: Nome do site usando a tag <h1> (Dica da atividade) -->
-                    <h1>W3Schools</h1>
+                    <h1>Casas Bahia</h1>
 
                     <!-- Elemento semântico figure agrupando a imagem e sua respectiva legenda -->
                     <figure>
                         <!-- Opcional da atividade: link interativo também na imagem do site -->
-                        <a href="https://www.w3schools.com" target="_blank" rel="noopener noreferrer" title="Visitar o W3Schools">
+                        <a href="https://www.casasbahia.com.br" target="_blank" rel="noopener noreferrer" title="Visitar a Casas Bahia">
                             <!-- Imagem do site armazenada localmente na mesma pasta do arquivo HTML -->
-                            <img src="site4_w3schools.png" alt="Tutoriais e ambiente interativo W3Schools" width="800" height="450">
+                            <img src="site4_casasbahia.png" alt="Loja virtual Casas Bahia" width="800" height="450">
                         </a>
                         <!-- Legenda identificando a fonte da imagem e atribuição -->
-                        <figcaption>Figura 4: Plataforma educacional W3Schools (w3schools.com)</figcaption>
+                        <figcaption>Figura 4: Loja virtual Casas Bahia (casasbahia.com.br)</figcaption>
                     </figure>
 
-                    <!-- Breve descrição contextualizando a importância do site para os estudos -->
+                    <!-- Breve descrição contextualizando a utilidade do site no dia a dia -->
                     <p class="site-descricao">
-                        Ambiente de aprendizado prático e interativo com recursos "Try it Yourself".
-                        Excelente para testar rapidamente tags HTML5, propriedades CSS e scripts direto no navegador.
+                        Uma das maiores redes varejistas do Brasil, referência na compra de móveis, eletrodomésticos,
+                        televisores e celulares, oferecendo facilidades de pagamento como o tradicional carnê digital.
                     </p>
 
                     <!-- Abaixo da imagem: Link para o site usando a tag <a> (Requisito obrigatório) -->
-                    <a href="https://www.w3schools.com" target="_blank" rel="noopener noreferrer" class="link-site">
-                        Acessar o W3Schools
+                    <a href="https://www.casasbahia.com.br" target="_blank" rel="noopener noreferrer" class="link-site">
+                        Acessar a Casas Bahia
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <line x1="7" y1="17" x2="17" y2="7"></line>
                             <polyline points="7 7 17 7 17 17"></polyline>
@@ -229,38 +229,38 @@
                 </article>
 
                 <!-- ==============================================================
-                     SITE 5: YOUTUBE
+                     SITE 5: AMAZON
                      ============================================================== -->
                 <article class="site-card">
                     <!-- Cabeçalho do card com identificação e categoria -->
                     <div class="card-header">
-                        <span class="card-categoria">Vídeos & Educação</span>
+                        <span class="card-categoria">E-commerce Global & Prime</span>
                         <span class="card-numero">#05</span>
                     </div>
 
                     <!-- Acima da imagem: Nome do site usando a tag <h1> (Dica da atividade) -->
-                    <h1>YouTube</h1>
+                    <h1>Amazon</h1>
 
                     <!-- Elemento semântico figure agrupando a imagem e sua respectiva legenda -->
                     <figure>
                         <!-- Opcional da atividade: link interativo também na imagem do site -->
-                        <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" title="Visitar o YouTube">
+                        <a href="https://www.amazon.com.br" target="_blank" rel="noopener noreferrer" title="Visitar a Amazon Brasil">
                             <!-- Imagem do site armazenada localmente na mesma pasta do arquivo HTML -->
-                            <img src="site5_youtube.png" alt="Canal de vídeos e videoaulas YouTube" width="800" height="450">
+                            <img src="site5_amazon.png" alt="Logotipo e plataforma da Amazon Brasil" width="800" height="450">
                         </a>
                         <!-- Legenda identificando a fonte da imagem e atribuição -->
-                        <figcaption>Figura 5: Plataforma audiovisual YouTube (youtube.com)</figcaption>
+                        <figcaption>Figura 5: Portal de compras Amazon Brasil (amazon.com.br)</figcaption>
                     </figure>
 
-                    <!-- Breve descrição contextualizando a importância do site para os estudos -->
+                    <!-- Breve descrição contextualizando a utilidade do site no dia a dia -->
                     <p class="site-descricao">
-                        Plataforma de streaming essencial para assistir às videoaulas do curso técnico,
-                        tutoriais práticos de programação, canais especializados e momentos de passatempo e entretenimento.
+                        Gigante mundial de tecnologia e comércio eletrônico, reconhecida pelo catálogo gigantesco,
+                        entregas expressas para assinantes Amazon Prime, promoções Prime Day e ampla linha de eletrônicos e livros.
                     </p>
 
                     <!-- Abaixo da imagem: Link para o site usando a tag <a> (Requisito obrigatório) -->
-                    <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" class="link-site">
-                        Acessar o YouTube
+                    <a href="https://www.amazon.com.br" target="_blank" rel="noopener noreferrer" class="link-site">
+                        Acessar a Amazon
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <line x1="7" y1="17" x2="17" y2="7"></line>
                             <polyline points="7 7 17 7 17 17"></polyline>
