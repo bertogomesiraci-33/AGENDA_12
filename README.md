@@ -41,11 +41,12 @@ Atividade prática avaliativa da **Agenda 12**, desenvolvida estritamente com ba
 
 ## 💻 Evidências de Execução e Código
 
-### 1. Execução no Navegador
-![Execução no Navegador](captura-execucao-navegador.png)
+### 1. Execução Completa no Navegador
+![Execução Completa no Navegador](captura-execucao-navegador-completa.png)
 
-### 2. Código HTML5 Comentado no VS Code (81 Linhas)
-![Código com Comentários](captura-codigo-html-comentado.png)
+### 2. Código HTML5 Comentado no VS Code (80 Linhas)
+![Código com Comentários - Parte 1](Captura%20de%20tela%202026-11-01%20211027.png)
+![Código com Comentários - Parte 2](Captura%20de%20tela%202026-11-01%20211149.png)
 
 ---
 
